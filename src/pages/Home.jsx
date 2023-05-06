@@ -13,11 +13,11 @@ export default function Home() {
     <>
       <Helmet>
         <title>
-          Onboarder - Seamlessly Onboard to Decentralized Products and Protocols
+          Onboarder - Seamlessly Onboard to Web3 Products and Protocols
         </title>
         <meta
           name="description"
-          content="Onboarder is a decentralized onboarding solution that allows users to seamlessly onboard to decentralized products and protocols."
+          content="Onboarder is a Web3 onboarding solution that allows users to seamlessly onboard to decentralized products and protocols."
         />
       </Helmet>
       <Header />
