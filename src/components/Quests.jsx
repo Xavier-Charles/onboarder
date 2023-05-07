@@ -1,4 +1,8 @@
 import moment from "moment";
+import bnbgreenfield from "../assets/img/projects/bnbgreenfield.jpg";
+import nodereal from "../assets/img/projects/nodereal.jpg";
+import axelar from "../assets/img/projects/axelar.jpg";
+import clsx from "clsx";
 
 function SwirlyDoodle({ className }) {
   return (
@@ -21,21 +25,33 @@ const Quests = () => {
   const questsList = [
     {
       id: 1,
+      slug: "bnb-greenfield",
       title: "BnB Greenfield",
       start: "2023-05-10T09:30:00",
       end: "2023-11-10T11:59:00",
+      img: bnbgreenfield,
+      imgPos: "object-right",
+      colors: ["#787522"],
     },
     {
       id: 2,
+      slug: "nodereal",
       title: "NodeReal",
       start: "2023-05-25T09:30:00",
       end: "2023-10-05T11:59:00",
+      img: nodereal,
+      imgPos: "object-right",
+      colors: ["#4d32c5"],
     },
     {
       id: 3,
+      slug: "axelar",
       title: "Axelar",
       start: "2023-05-22T09:30:00",
       end: "2023-07-31T11:59:00",
+      img: axelar,
+      imgPos: "object-left",
+      colors: ["#1ea4c2"],
     },
   ];
   return (
@@ -58,12 +74,20 @@ const Quests = () => {
               className="group relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
             >
               <img
-                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-                alt=""
-                className="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                src={quest.img}
+                alt={quest.title}
+                className={clsx(
+                  "absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out",
+                  quest.imgPos
+                )}
               />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 group-hover:opacity-0 transition-opacity duration-500 ease-in-out"></div>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-blue-900 via-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></div>
+              <div
+                className={clsx(
+                  "absolute inset-0 -z-10 bg-gradient-to-t via-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out",
+                  `from-[${quest.colors[0]}]`
+                )}
+              ></div>
               <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
 
               <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
