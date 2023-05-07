@@ -12,6 +12,7 @@ export default {
         jetBrown: "#323031", // rgb(50, 48, 49)
         oxford: "#14213d", // rgb(20, 33, 61)
         magwhite: "#f9f5ff", // rgb(249, 245, 255)
+        alice: "#F4FAFF", // rgb(244, 250, 255)
       },
       fontFamily: {
         nunito: "'Nunito', sans-serif",
