@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import Quests from "../components/Quests";
+import { Learn } from "../components/Learn";
+import { Footer } from "../components/Footer";
 // import { PrimaryFeatures } from "../components/PrimaryFeatures";
 // import { SecondaryFeatures } from "../components/SecondaryFeatures";
 // import { Testimonials } from "../components/Testimonials";
@@ -24,6 +26,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Learn />
         <Quests />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
@@ -31,7 +34,7 @@ export default function Home() {
         {/* <Testimonials /> */}
         {/* <Faqs /> */}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
