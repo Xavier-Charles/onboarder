@@ -1,3 +1,5 @@
+import moment from "moment";
+
 function SwirlyDoodle({ className }) {
   return (
     <svg
@@ -16,6 +18,26 @@ function SwirlyDoodle({ className }) {
 }
 
 const Quests = () => {
+  const questsList = [
+    {
+      id: 1,
+      title: "BnB Greenfield",
+      start: "2023-05-10T09:30:00",
+      end: "2023-11-10T11:59:00",
+    },
+    {
+      id: 2,
+      title: "NodeReal",
+      start: "2023-05-25T09:30:00",
+      end: "2023-10-05T11:59:00",
+    },
+    {
+      id: 3,
+      title: "Axelar",
+      start: "2023-05-22T09:30:00",
+      end: "2023-07-31T11:59:00",
+    },
+  ];
   return (
     <section
       id="hero"
@@ -30,64 +52,42 @@ const Quests = () => {
           </h2>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
-            <img
-              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-              alt=""
-              className="absolute inset-0 -z-10 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+          {questsList.map((quest) => (
+            <article
+              key={quest.id}
+              className="group relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
+                alt=""
+                className="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+              />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 group-hover:opacity-0 transition-opacity duration-500 ease-in-out"></div>
+              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-blue-900 via-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></div>
+              <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
 
-            <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-              <time dateTime="2020-03-16" className="mr-8">
-                May 16 - Nov 24 2023
-              </time>
-              <div className="-ml-4 flex items-center gap-x-4">
-                <svg
-                  viewBox="0 0 2 2"
-                  className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
-                >
-                  <circle cx="1" cy="1" r="1" />
-                </svg>
+              <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+                <time dateTime="2020-03-16" className="mr-8">
+                  {moment(quest.start).format("MMM D")} -{" "}
+                  {moment(quest.end).format("MMM D, YYYY")}
+                </time>
+                <div className="-ml-4 flex items-center gap-x-4">
+                  <svg
+                    viewBox="0 0 2 2"
+                    className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
+                  >
+                    <circle cx="1" cy="1" r="1" />
+                  </svg>
+                </div>
               </div>
-            </div>
-            <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-              <a href="#">
-                <span className="absolute inset-0"></span>
-                BnB Greenfield
-              </a>
-            </h3>
-          </article>
-          <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
-            <img
-              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-              alt=""
-              className="absolute inset-0 -z-10 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-
-            <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-              <time dateTime="2020-03-16" className="mr-8">
-                May 16 - Nov 24 2023
-              </time>
-              <div className="-ml-4 flex items-center gap-x-4">
-                <svg
-                  viewBox="0 0 2 2"
-                  className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
-                >
-                  <circle cx="1" cy="1" r="1" />
-                </svg>
-              </div>
-            </div>
-            <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-              <a href="#">
-                <span className="absolute inset-0"></span>
-                Axelar
-              </a>
-            </h3>
-          </article>
+              <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                <a href="#">
+                  <span className="absolute inset-0"></span>
+                  {quest.title}
+                </a>
+              </h3>
+            </article>
+          ))}
         </div>
       </div>
     </section>
