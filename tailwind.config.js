@@ -11,10 +11,10 @@ export default {
         sunglow: "#ffc857", // rgb(255, 200, 87)
         jetBrown: "#323031", // rgb(50, 48, 49)
         oxford: "#14213d", // rgb(20, 33, 61)
-        magwhite: "#f9f5ff" // rgb(249, 245, 255)
+        magwhite: "#f9f5ff", // rgb(249, 245, 255)
       },
       fontFamily: {
-        oleo: "'Oleo Script', cursive",
+        nunito: "'Nunito', sans-serif",
       },
     },
   },
