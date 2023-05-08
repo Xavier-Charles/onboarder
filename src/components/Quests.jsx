@@ -105,7 +105,7 @@ const Quests = () => {
                 </div>
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href="#">
+                <a href={`/q/${quest.slug}`}>
                   <span className="absolute inset-0"></span>
                   {quest.title}
                 </a>
