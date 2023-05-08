@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 
@@ -12,7 +12,7 @@ export function Footer() {
         <div className="flex flex-col items-center border-t border-magwhite/80 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             <Link
-              href="https://twitter.com"
+              to="https://twitter.com"
               className="group"
               aria-label="Onboarder on Twitter"
             >
@@ -24,7 +24,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://github.com"
+              to="https://github.com"
               className="group"
               aria-label="Onboarder on GitHub"
             >
