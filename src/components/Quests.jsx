@@ -3,6 +3,7 @@ import bnbgreenfield from "../assets/img/projects/bnbgreenfield.jpg";
 import nodereal from "../assets/img/projects/nodereal.jpg";
 import axelar from "../assets/img/projects/axelar.jpg";
 import clsx from "clsx";
+import { Link } from "@reach/router";
 
 function SwirlyDoodle({ className }) {
   return (
@@ -105,10 +106,10 @@ const Quests = () => {
                 </div>
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href={`/q/${quest.slug}`}>
+                <Link to={`/q/${quest.slug}`}>
                   <span className="absolute inset-0"></span>
                   {quest.title}
-                </a>
+                </Link>
               </h3>
             </article>
           ))}

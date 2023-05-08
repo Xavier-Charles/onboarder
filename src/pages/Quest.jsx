@@ -1,3 +1,4 @@
+import { Link } from "@reach/router";
 import { motion, useIsPresent } from "framer-motion";
 
 const Quest = () => {
@@ -8,6 +9,7 @@ const Quest = () => {
   return (
     <div>
       <div key="quest" className="bg-oxford">
+        <Link to="/" className="text-magwhite underline text-3xl">Home</Link>
         <h1>Quest</h1>
         <p className="py-40">Quest</p>
         <motion.div
