@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import TransitionAnimation from "../components/quest/transitionAnimation";
+import TransitionAnimation from "../components/transitions/TransitionAnimationX";
 import Hero from "../components/quest/hero";
 import { Helmet } from "react-helmet";
 import { Header } from "../components/Header";
