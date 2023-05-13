@@ -8,7 +8,7 @@ const FramerRouter = ({ children }) => (
   <Location>
     {({ location }) => (
       <div style={{ position: "relative" }}>
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           <Router key={location.key} location={location}>
             {children}
           </Router>
