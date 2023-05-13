@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import CompletedCheckBox from "./CompletedCheckBox";
 
-const Card = ({ item, setSelectedId }) => {
+const Card = ({ item, setSelectedId, isCompleted }) => {
   return (
     <motion.div
       layoutId={item.id}
@@ -11,9 +12,12 @@ const Card = ({ item, setSelectedId }) => {
       }}
     >
       <motion.div className="h-full bg-magwhite/80 shadow-sm bg-opacity-75 px-8 pt-10 pb-24 rounded-lg overflow-hidden relative">
-        <motion.h2 className="tracking-widest text-xs title-font font-medium text-gray-900 mb-5">
-          GETTING STARTED
-        </motion.h2>
+        <div className="flex justify-between w-full items-center">
+          <motion.h2 className="tracking-widest text-xs title-font font-medium text-gray-900 mb-5">
+            GETTING STARTED
+          </motion.h2>
+          {isCompleted && <CompletedCheckBox classes="h-4 w-4" />}
+        </div>
         <motion.h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-2">
           {item.title}
         </motion.h1>

@@ -4,6 +4,7 @@ import Card from "./Card";
 import { entryQuestions } from "../../api/mockData/entryQuestions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
+import CardNav from "./CardNav";
 
 const BlockQuoteSVG = ({ classes }) => (
   <svg
@@ -22,12 +23,23 @@ const BlockQuoteSVG = ({ classes }) => (
 
 const Lesson1 = () => {
   const [selectedId, setSelectedId] = useState(null);
+  const [cardProgress, setCardProgress] = useState(
+    entryQuestions.map((item) => ({ id: item.id, completed: false }))
+  );
+  const [showCardQA, setShowCardQA] = useState(false);
+  const [selectedOptionId, setSelectedOptionId] = useState(null);
 
   const containerRef = useClickOutside(() => {});
 
   const selectedItem = entryQuestions.find((item) => item.id === selectedId);
 
-  console.log("selectedItem", selectedItem);
+  const onCloseModal = () => {
+    setSelectedId(null);
+    setSelectedOptionId(null);
+    setShowCardQA(false);
+  };
+
+  console.log("cardProgress", cardProgress);
 
   return (
     <section className="text-gray-600 body-font">
@@ -41,7 +53,15 @@ const Lesson1 = () => {
         </figure>
         <div className="flex flex-wrap justify-center">
           {Object.values(entryQuestions).map((item) => (
-            <Card item={item} key={item.id} setSelectedId={setSelectedId} />
+            <Card
+              item={item}
+              key={item.id}
+              setSelectedId={setSelectedId}
+              isCompleted={
+                cardProgress.find((pItem) => pItem.id === item.id)
+                  .completed
+              }
+            />
           ))}
         </div>
       </div>
@@ -53,13 +73,13 @@ const Lesson1 = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 hidden bg-gray-500 bg-opacity-75 transition-opacity md:block"
-              onClick={() => setSelectedId(null)}
+              onClick={onCloseModal}
             />
             <motion.div ref={containerRef} layoutId={selectedId}>
               <div className="flex w-full justify-center transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
-                <div className="relative flex w-full items-center overflow-hidden bg-magwhite rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
+                <div className="relative flex flex-col w-full items-center overflow-hidden bg-magwhite rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
                   <motion.button
-                    onClick={() => setSelectedId(null)}
+                    onClick={onCloseModal}
                     type="button"
                     className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
                   >
@@ -79,7 +99,6 @@ const Lesson1 = () => {
                       />
                     </svg>
                   </motion.button>
-
                   <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8">
                     <div className="sm:col-span-4 lg:col-span-5">
                       <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
@@ -91,21 +110,84 @@ const Lesson1 = () => {
                       </div>
                     </div>
                     <div className="sm:col-span-8 lg:col-span-7">
-                      <h2 className="text-2xl font-bold text-gray-900 sm:pr-12">
-                        {selectedItem.title}
-                      </h2>
+                      <motion.h2 className="text-2xl font-bold text-gray-900 sm:pr-12">
+                        {selectedItem[showCardQA ? "question" : "title"]}
+                      </motion.h2>
 
                       <section
                         aria-labelledby="information-heading"
                         className="mt-4"
                       >
-                        <div className="flex items-center">
-                          <p className="text-lg text-gray-900 sm:text-lg">
-                            {selectedItem.summary}
-                          </p>
-                        </div>
+                        {showCardQA ? (
+                          <>
+                            {Object.values(selectedItem.options).map(
+                              (option) => {
+                                const optionSelected =
+                                  selectedOptionId &&
+                                  selectedOptionId === option.id;
+                                const isCorrect =
+                                  selectedItem.answer === option.id;
+                                return (
+                                  <motion.button
+                                    key={option.id}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() => {
+                                      setSelectedOptionId(option.id);
+                                      if (isCorrect) {
+                                        setCardProgress((prev) => {
+                                          return prev.map((item) => {
+                                            if (item.id === selectedItem.id) {
+                                              return {
+                                                ...item,
+                                                completed: true,
+                                              };
+                                            }
+                                            return item;
+                                          });
+                                        });
+                                      }
+                                    }}
+                                    className={clsx(
+                                      "col-span-1 divide-y my-2 divide-gray-200 rounded-lg bg-magwhite shadow w-[90%]",
+                                      optionSelected &&
+                                        (isCorrect ? "bg-teal" : "bg-red-500")
+                                    )}
+                                  >
+                                    <div className="flex w-full items-center justify-between space-x-6 p-6">
+                                      <h3
+                                        className={clsx(
+                                          "truncate text-sm font-medium",
+                                          optionSelected && "text-magwhite"
+                                        )}
+                                      >
+                                        {option.value}
+                                      </h3>
+                                    </div>
+                                  </motion.button>
+                                );
+                              }
+                            )}
+                          </>
+                        ) : (
+                          <div className="flex items-center">
+                            <p className="text-lg text-gray-900 sm:text-lg">
+                              {selectedItem.summary}
+                            </p>
+                          </div>
+                        )}
                       </section>
                     </div>
+                  </div>
+                  <div className="mt-6 sm:mt-8">
+                    <CardNav
+                      showCardQA={showCardQA}
+                      setShowCardQA={setShowCardQA}
+                      isCompleted={
+                        cardProgress.find((item) => item.id === selectedItem.id)
+                          .completed
+                      }
+                    />
                   </div>
                 </div>
               </div>
