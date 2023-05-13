@@ -64,8 +64,8 @@ const Quests = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-[280px] text-center">
           <h2 className="text-3xl relative font-bold tracking-tight text-magwhite sm:text-4xl">
-            Live Quests
             <SwirlyDoodle className="absolute mt-2 left-0 top-1/2 h-[1em] w-full fill-pink/70" />
+            <span className="relative">Live Quests</span>
           </h2>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
