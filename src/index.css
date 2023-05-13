@@ -6,3 +6,9 @@
 *{
   font-family: 'Nunito', sans-serif;
 }
+
+/* Gradients  */
+
+.grad-l1 {
+  background: linear-gradient(90deg, hsla(219, 41%, 13%, 1) 0%, hsla(212, 40%, 24%, 1) 100%);
+}

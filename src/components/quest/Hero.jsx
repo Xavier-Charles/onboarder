@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import greenfield from "../../assets/img/quests/greenfieldHero.png";
+import { navigate } from "@reach/router";
 
 const Hero = () => {
   return (
@@ -50,6 +51,7 @@ const Hero = () => {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <motion.button
+                onClick={() => navigate("/l1/greenfield")}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="rounded-md bg-[#079e0c]/80 px-5 py-3.5 font-semibold text-white shadow-sm hover:bg-[#f2c057]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
