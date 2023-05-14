@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import CompletedCheckBox from "./CompletedCheckBox";
 
-const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
+const CardNav = ({ showCardQA, setShowCardQA, isCompleted, type }) => {
   return (
     <nav aria-label="Progress">
       <ol
@@ -93,7 +93,7 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
                     : "text-gray-600 group-hover:text-gray-900"
                 )}
               >
-                Q & A
+                {type === "verify" ? "Verify" : "Q & A"}
               </span>
             </span>
           </div>

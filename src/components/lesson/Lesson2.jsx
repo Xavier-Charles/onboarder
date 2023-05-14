@@ -187,6 +187,7 @@ const Lesson2 = ({ onLessonComplete }) => {
                     <CardNav
                       showCardQA={showCardQA}
                       setShowCardQA={setShowCardQA}
+                      type={selectedItem.type}
                       isCompleted={
                         cardProgress.find((item) => item.id === selectedItem.id)
                           .completed
