@@ -126,15 +126,15 @@ const Lesson2 = ({ onLessonComplete }) => {
                       >
                         {showCardQA ? (
                           <>
-                            {selectedItem.type === "verify" ? (
-                              <QandA
+                            {selectedItem.type?.includes("verify") ? (
+                              <Verify
                                 selectedItem={selectedItem}
                                 selectedOptionId={selectedOptionId}
                                 setSelectedOptionId={setSelectedOptionId}
                                 setCardProgress={setCardProgress}
                               />
                             ) : (
-                              <Verify
+                              <QandA
                                 selectedItem={selectedItem}
                                 selectedOptionId={selectedOptionId}
                                 setSelectedOptionId={setSelectedOptionId}

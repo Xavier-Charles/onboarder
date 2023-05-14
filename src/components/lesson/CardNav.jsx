@@ -93,7 +93,7 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted, type }) => {
                     : "text-gray-600 group-hover:text-gray-900"
                 )}
               >
-                {type === "verify" ? "Verify" : "Q & A"}
+                {type?.includes("verify") ? "Verify" : "Q & A"}
               </span>
             </span>
           </div>

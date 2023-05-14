@@ -6,7 +6,7 @@ import q8 from "../../assets/img/questions/q8.png";
 export const setupQuestions = [
   {
     id: 5,
-    title: "Wallet Configuration",
+    title: "Setting up your Wallet",
     subtitle:
       "Learn how to use the MetaMask extension to interact with Greenfield Testnet",
 
@@ -36,12 +36,15 @@ export const setupQuestions = [
               <li> Find Greenfield BSC Testnet, and click <strong>Add To Metamask.</strong></li>
 
               <li>When MetaMask prompts a window, click <strong>Approve.</strong></li>
+              <li>When MetaMask prompts another window, click <strong>Switch network.</strong></li>
               <li>After that come back here and verify.</li>
               </ol>
              `,
     img: q6,
+    question:
+      "Once you connect your wallet, we will check if you've switched to the correct network.",
     answer: 5601,
-    type: "verify",
+    type: "verify-network",
     classes: "lg:w-4/12",
   },
   {
@@ -57,18 +60,21 @@ export const setupQuestions = [
               <li> Find Greenfield Blockchain Testnet, and click <strong>Add To Metamask.</strong></li>
 
               <li>When MetaMask prompts a window, click <strong>Approve.</strong></li>
+              <li>When MetaMask prompts another window, click <strong>Switch network.</strong></li>
               <li>After that come back here and verify</li>
               </ol>
              `,
     img: q7,
+    question:
+      "Once you connect your wallet, we will check if you've switched to the correct network.",
     answer: 5600,
-    type: "verify",
+    type: "verify-network",
     classes: "lg:w-4/2",
   },
   {
     id: 8,
     title: "Get test BNB",
-    subtitle: "Get testnet BNB on the grrenfield network from the faucet.",
+    subtitle: "Get testnet BNB on the greenfield network from the faucet.",
 
     summary: `<ol class="list-decimal pl-5">
               <li>Visit <a class="text-jetbrown underline" target="_blank" href="https://gnfd-bsc-faucet.bnbchain.org/">Greenfield BSC Testnet Faucet</a>.</li>
@@ -83,8 +89,10 @@ export const setupQuestions = [
               </ol>
              `,
     img: q8,
-    answer: 1,
-    type: "verify",
+    question:
+      "Once you connect your wallet, we will check if you've have tBnB.",
+    answer: 0.0001,
+    type: "verify-balance",
     classes: "lg:w-9/12",
   },
 ];
