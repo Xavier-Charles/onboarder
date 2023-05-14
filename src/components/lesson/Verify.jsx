@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const Verify = ({
   selectedItem,
-  selectedOptionId,
-  setSelectedOptionId,
+  // selectedOptionId,
+  // setSelectedOptionId,
   setCardProgress,
 }) => {
   const [error, setError] = useState(null);
