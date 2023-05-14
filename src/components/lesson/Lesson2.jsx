@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import ReactHtmlParser from "react-html-parser";
 import Card from "./Card";
 import { setupQuestions } from "../../api/mockData/setupQuestions";
 import clsx from "clsx";
@@ -48,7 +49,7 @@ const Lesson2 = ({ onLessonComplete }) => {
         <figure className="relative isolate flex justify-center">
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
-          <h1 className="mt-2 text-center text-3xl font-sans font-bold pb-10 tracking-tight text-magwhite sm:text-6xl">
+          <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
             Wallet Configuration
           </h1>
         </figure>
@@ -56,9 +57,11 @@ const Lesson2 = ({ onLessonComplete }) => {
           {Object.values(setupQuestions).map((item) => (
             <Card
               item={item}
+              lesson="WALLET CONFIGURATION"
               key={item.id}
               setSelectedId={setSelectedId}
               layoutId={`l2-${item.id}`}
+              type={item.type}
               isCompleted={
                 cardProgress.find((pItem) => pItem.id === item.id).completed
               }
@@ -173,7 +176,7 @@ const Lesson2 = ({ onLessonComplete }) => {
                         ) : (
                           <div className="flex items-center">
                             <p className="text-lg text-gray-900 sm:text-lg">
-                              {selectedItem.summary}
+                              {ReactHtmlParser(selectedItem.summary)}
                             </p>
                           </div>
                         )}

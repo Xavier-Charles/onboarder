@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import CompletedCheckBox from "./CompletedCheckBox";
 
-const Card = ({ item, setSelectedId, isCompleted, layoutId }) => {
+const Card = ({ item, setSelectedId, isCompleted, layoutId, type, lesson }) => {
   return (
     <motion.div
       layoutId={layoutId}
@@ -14,7 +14,7 @@ const Card = ({ item, setSelectedId, isCompleted, layoutId }) => {
       <motion.div className="h-full bg-magwhite/80 shadow-sm bg-opacity-75 px-8 pt-10 pb-24 rounded-lg overflow-hidden relative">
         <div className="flex justify-between w-full items-center">
           <motion.h2 className="tracking-widest text-xs title-font font-medium text-gray-900 mb-5">
-            GETTING STARTED
+            {lesson}
           </motion.h2>
           {isCompleted && <CompletedCheckBox classes="h-4 w-4" />}
         </div>

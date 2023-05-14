@@ -8,7 +8,7 @@ import Lesson2 from "../components/lesson/Lesson2";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Quest = () => {
-  const [lessonProgress, setLessonProgress] = useState(1);
+  const [lessonProgress, setLessonProgress] = useState(2);
 
   useEffect(() => {
     scrollToTop();
@@ -50,7 +50,7 @@ const Quest = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <Lesson2 onLessonComplete={setLessonProgress} />{" "}
+            <Lesson2 onLessonComplete={setLessonProgress} />
           </motion.div>
         )}
       </AnimatePresence>

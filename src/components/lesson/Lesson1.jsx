@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactHtmlParser from "react-html-parser";
 import { AnimatePresence, motion } from "framer-motion";
 import Card from "./Card";
 import { entryQuestions } from "../../api/mockData/entryQuestions";
@@ -54,7 +55,7 @@ const Lesson1 = ({ onLessonComplete }) => {
         <figure className="relative isolate flex justify-center">
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
-          <h1 className="mt-2 text-center text-3xl font-sans font-bold pb-10 tracking-tight text-magwhite sm:text-6xl">
+          <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
             BNB Greenfield - Intro
           </h1>
         </figure>
@@ -62,6 +63,7 @@ const Lesson1 = ({ onLessonComplete }) => {
           {Object.values(entryQuestions).map((item) => (
             <Card
               item={item}
+              lesson="BASICS"
               key={item.id}
               setSelectedId={setSelectedId}
               layoutId={`l1-${item.id}`}
@@ -179,7 +181,7 @@ const Lesson1 = ({ onLessonComplete }) => {
                         ) : (
                           <div className="flex items-center">
                             <p className="text-lg text-gray-900 sm:text-lg">
-                              {selectedItem.summary}
+                              {ReactHtmlParser(selectedItem.summary)}
                             </p>
                           </div>
                         )}
