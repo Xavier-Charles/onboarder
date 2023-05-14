@@ -9,12 +9,14 @@ export default {
         teal: "#177e89", // rgb(23, 126, 137)
         midnightGreen: "#084C61", // rgb(8, 76, 97)
         sunglow: "#ffc857", // rgb(255, 200, 87)
-        jetBrown: "#323031", // rgb(50, 48, 49)
+        jetbrown: "#323031", // rgb(50, 48, 49)
         oxford: "#14213d", // rgb(20, 33, 61)
-        magwhite: "#f9f5ff" // rgb(249, 245, 255)
+        slate: "#c8c8d4", // rgb(200, 200, 212) 
+        magwhite: "#f9f5ff", // rgb(249, 245, 255)
+        alice: "#F4FAFF", // rgb(244, 250, 255)
       },
       fontFamily: {
-        oleo: "'Oleo Script', cursive",
+        nunito: "'Nunito', sans-serif",
       },
     },
   },

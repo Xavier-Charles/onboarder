@@ -1,12 +1,32 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 
-function Router() {
+import { AnimatePresence } from "framer-motion";
+import Home from "./pages/Home";
+import Quest from "./pages/Quest";
+import QuestLesson from "./pages/QuestLesson";
+import { Router, Location } from "@reach/router";
+
+const FramerRouter = ({ children }) => (
+  <Location>
+    {({ location }) => (
+      <div style={{ position: "relative" }}>
+        <AnimatePresence initial={false}>
+          <Router key={location.key} location={location}>
+            {children}
+          </Router>
+        </AnimatePresence>
+      </div>
+    )}
+  </Location>
+);
+
+function AppRouter() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <FramerRouter>
+      <Home path="/" />
+      <Quest path="q/:slug"></Quest>
+      <QuestLesson path="lessons/:slug" />
+    </FramerRouter>
   );
 }
 
-export default Router;
+export default AppRouter;
