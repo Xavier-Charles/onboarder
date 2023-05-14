@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Card from "./Card";
-import { entryQuestions } from "../../api/mockData/entryQuestions";
+import { setupQuestions } from "../../api/mockData/setupQuestions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "./CardNav";
@@ -25,14 +25,14 @@ const BlockQuoteSVG = ({ classes }) => (
 const Lesson2 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
-    entryQuestions.map((item) => ({ id: item.id, completed: false }))
+    setupQuestions.map((item) => ({ id: item.id, completed: false }))
   );
   const [showCardQA, setShowCardQA] = useState(false);
   const [selectedOptionId, setSelectedOptionId] = useState(null);
 
   const containerRef = useClickOutside(() => {});
 
-  const selectedItem = entryQuestions.find((item) => item.id === selectedId);
+  const selectedItem = setupQuestions.find((item) => item.id === selectedId);
 
   const onCloseModal = () => {
     setSelectedId(null);
@@ -49,11 +49,11 @@ const Lesson2 = ({ onLessonComplete }) => {
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-bold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            Setting up
+            Wallet Configuration
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
-          {Object.values(entryQuestions).map((item) => (
+          {Object.values(setupQuestions).map((item) => (
             <Card
               item={item}
               key={item.id}
