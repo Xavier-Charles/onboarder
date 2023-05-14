@@ -5,7 +5,7 @@ import { Hero } from "../components/Hero";
 import Quests from "../components/Quests";
 import { Learn } from "../components/Learn";
 import { Footer } from "../components/Footer";
-import { scrollToTop } from "../utils/scrollToTop";
+import { scrollToTop } from "../utils/scrollTo";
 
 export default function Home() {
   useEffect(() => {

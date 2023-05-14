@@ -22,7 +22,7 @@ const BlockQuoteSVG = ({ classes }) => (
   </svg>
 );
 
-const Lesson1 = ({ onLessonComplete }) => {
+const Lesson2 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
     entryQuestions.map((item) => ({ id: item.id, completed: false }))
@@ -40,22 +40,16 @@ const Lesson1 = ({ onLessonComplete }) => {
     setShowCardQA(false);
   };
 
-  const resetCardProgress = () => {
-    setCardProgress(
-      entryQuestions.map((item) => ({ id: item.id, completed: false }))
-    );
-  };
-  const showAllCompleteModal =
-    cardProgress.every((item) => item.completed) && selectedId === null;
+  const allCompleted = cardProgress.every((item) => item.completed);
 
   return (
-    <section id="l1" className="text-gray-600 body-font">
+    <section id="l2" className="text-gray-600 body-font">
       <div className="container px-5 py-24 pt-32 mx-auto max-w-7xl">
         <figure className="relative isolate flex justify-center">
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-bold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            BNB Greenfield - Intro
+            Setting up
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
@@ -64,7 +58,7 @@ const Lesson1 = ({ onLessonComplete }) => {
               item={item}
               key={item.id}
               setSelectedId={setSelectedId}
-              layoutId={`l1-${item.id}`}
+              layoutId={`l2-${item.id}`}
               isCompleted={
                 cardProgress.find((pItem) => pItem.id === item.id).completed
               }
@@ -82,7 +76,7 @@ const Lesson1 = ({ onLessonComplete }) => {
               className="fixed inset-0 hidden bg-jetbrown bg-opacity-70 transition-opacity md:block"
               onClick={onCloseModal}
             />
-            <motion.div ref={containerRef} layoutId={`l1-${selectedId}`}>
+            <motion.div ref={containerRef} layoutId={`l2-${selectedId}`}>
               <div className="flex w-full justify-center transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
                 <div className="relative flex flex-col w-full items-center overflow-hidden bg-slate rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
                   <motion.button
@@ -202,15 +196,11 @@ const Lesson1 = ({ onLessonComplete }) => {
           </div>
         )}
       </AnimatePresence>
-      {showAllCompleteModal && (
-        <LessonComplete
-          onLessonComplete={onLessonComplete}
-          resetCardProgress={resetCardProgress}
-          lessonId={1}
-        />
+      {allCompleted && (
+        <LessonComplete onLessonComplete={onLessonComplete} lessonId={2} />
       )}
     </section>
   );
 };
 
-export default Lesson1;
+export default Lesson2;

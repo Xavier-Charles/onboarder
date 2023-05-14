@@ -24,7 +24,7 @@ function AppRouter() {
     <FramerRouter>
       <Home path="/" />
       <Quest path="q/:slug"></Quest>
-      <QuestLesson path="l1/:slug" />
+      <QuestLesson path="lessons/:slug" />
     </FramerRouter>
   );
 }

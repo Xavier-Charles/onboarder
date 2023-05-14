@@ -2,10 +2,10 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import CompletedCheckBox from "./CompletedCheckBox";
 
-const Card = ({ item, setSelectedId, isCompleted }) => {
+const Card = ({ item, setSelectedId, isCompleted, layoutId }) => {
   return (
     <motion.div
-      layoutId={item.id}
+      layoutId={layoutId}
       className={clsx("p-4 pb-5 w-full lg:w-1/3 cursor-pointer", item.classes)}
       onClick={() => {
         setSelectedId(item.id);

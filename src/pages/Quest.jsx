@@ -3,7 +3,7 @@ import TransitionAnimation from "../components/transitions/TransitionAnimationX"
 import Hero from "../components/quest/hero";
 import { Helmet } from "react-helmet";
 import { Header } from "../components/Header";
-import { scrollToTop } from "../utils/scrollToTop";
+import { scrollToTop } from "../utils/scrollTo";
 
 const Quest = () => {
   useEffect(() => {

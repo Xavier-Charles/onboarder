@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import lessonCompleteImg from "../../assets/img/lessonComplete.png";
 
-const LessonComplete = () => {
+const LessonComplete = ({ onLessonComplete, lessonId, resetCardProgress }) => {
   return (
     <div className="fixed z-20 inset-0 hidden md:flex justify-center items-center">
       <motion.div
@@ -9,7 +9,7 @@ const LessonComplete = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className="fixed inset-0 hidden bg-jetbrown bg-opacity-70 transition-opacity md:block"
-        // onClick={onCloseModal} // TODO You should be able to close the modal by clicking outside of it.  
+        // onClick={onCloseModal} // TODO You should be able to close the modal by clicking outside of it.
       />
       <motion.div>
         <div className="flex w-full justify-center transform text-left text-base transition md:my-8 md:max-w-xl md:px-4 lg:max-w-2xl">
@@ -38,7 +38,12 @@ const LessonComplete = () => {
                   </div>
 
                   <motion.button
-                    // onClick={() => navigate("/l1/greenfield#l2")}
+                    onClick={() => {
+                      onLessonComplete((prev) =>
+                        prev > lessonId ? prev : lessonId + 1
+                      );
+                      resetCardProgress();
+                    }}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="rounded-md mt-12 bg-teal/90 px-5 py-3.5 font-semibold text-magwhite shadow-sm hover:bg-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
