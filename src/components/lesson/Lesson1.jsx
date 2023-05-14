@@ -58,8 +58,7 @@ const Lesson1 = () => {
               key={item.id}
               setSelectedId={setSelectedId}
               isCompleted={
-                cardProgress.find((pItem) => pItem.id === item.id)
-                  .completed
+                cardProgress.find((pItem) => pItem.id === item.id).completed
               }
             />
           ))}
@@ -72,16 +71,16 @@ const Lesson1 = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 hidden bg-gray-500 bg-opacity-75 transition-opacity md:block"
+              className="fixed inset-0 hidden bg-jetbrown bg-opacity-70 transition-opacity md:block"
               onClick={onCloseModal}
             />
             <motion.div ref={containerRef} layoutId={selectedId}>
               <div className="flex w-full justify-center transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
-                <div className="relative flex flex-col w-full items-center overflow-hidden bg-magwhite rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
+                <div className="relative flex flex-col w-full items-center overflow-hidden bg-slate rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
                   <motion.button
                     onClick={onCloseModal}
                     type="button"
-                    className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
+                    className="absolute right-4 top-4 text-jetbrown80 hover:text-jetbrown sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
                   >
                     <span className="sr-only">Close</span>
                     <svg
@@ -101,12 +100,13 @@ const Lesson1 = () => {
                   </motion.button>
                   <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8">
                     <div className="sm:col-span-4 lg:col-span-5">
-                      <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
+                      <div className="relative aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/product-quick-preview-03-detail.jpg"
-                          alt="Interior of light green canvas bag with padded laptop sleeve and internal organization pouch."
+                          src={selectedItem.img}
+                          alt="relative Interior of light green canvas bag with padded laptop sleeve and internal organization pouch."
                           className="object-cover object-center"
                         />
+                        <div className="w-80 h-80 absolute bg-red top-0 z-10" />
                       </div>
                     </div>
                     <div className="sm:col-span-8 lg:col-span-7">

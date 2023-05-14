@@ -6,7 +6,7 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
     <nav aria-label="Progress">
       <ol
         role="list"
-        className="divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0"
+        className="divide-y divide-jetbrown/30 rounded-md border border-jetbrown/30 md:flex md:divide-y-0"
       >
         <li className="cursor-pointer relative md:flex md:flex-1">
           {/* <!-- Current Step --> */}
@@ -22,7 +22,7 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
               )}
             >
               <span
-                className={clsx(showCardQA ? "text-gray-500" : "text-teal")}
+                className={clsx(showCardQA ? "text-gray-600" : "text-teal")}
               >
                 02
               </span>
@@ -30,7 +30,7 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
             <span
               className={clsx(
                 "ml-4 text-sm font-medium",
-                showCardQA ? "text-gray-500" : "text-teal"
+                showCardQA ? "text-gray-600" : "text-teal"
               )}
             >
               Details
@@ -42,7 +42,7 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
             aria-hidden="true"
           >
             <svg
-              className="h-full w-full text-gray-300"
+              className="h-full w-full text-jetbrown/30"
               viewBox="0 0 22 80"
               fill="none"
               preserveAspectRatio="none"
@@ -71,14 +71,14 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
                     "flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2",
                     showCardQA
                       ? "border-teal"
-                      : "border-gray-300 group-hover:border-gray-400"
+                      : "border-jetbrown/30 group-hover:border-gray-400"
                   )}
                 >
                   <span
                     className={clsx(
                       showCardQA
                         ? "text-teal"
-                        : "text-gray-500 group-hover:text-gray-900"
+                        : "text-gray-600 group-hover:text-gray-900"
                     )}
                   >
                     03
@@ -90,7 +90,7 @@ const CardNav = ({ showCardQA, setShowCardQA, isCompleted }) => {
                   "ml-4 text-sm font-medium",
                   showCardQA
                     ? "text-teal"
-                    : "text-gray-500 group-hover:text-gray-900"
+                    : "text-gray-600 group-hover:text-gray-900"
                 )}
               >
                 Q & A
