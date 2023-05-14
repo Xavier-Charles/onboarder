@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import TransitionAnimation from "../components/transitions/TransitionAnimationX";
-import Hero from "../components/quest/hero";
+import Hero from "../components/quest/Hero";
 import { Helmet } from "react-helmet";
 import { Header } from "../components/Header";
 import { scrollToTop } from "../utils/scrollTo";
