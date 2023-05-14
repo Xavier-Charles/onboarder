@@ -5,6 +5,7 @@ import { entryQuestions } from "../../api/mockData/entryQuestions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "./CardNav";
+import LessonComplete from "./LessonComplete";
 
 const BlockQuoteSVG = ({ classes }) => (
   <svg
@@ -39,10 +40,12 @@ const Lesson1 = () => {
     setShowCardQA(false);
   };
 
+  const allCompleted = cardProgress.every((item) => item.completed);
+
   console.log("cardProgress", cardProgress);
 
   return (
-    <section className="text-gray-600 body-font">
+    <section id="l1" className="text-gray-600 body-font">
       <div className="container px-5 py-24 pt-32 mx-auto max-w-7xl">
         <figure className="relative isolate flex justify-center">
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
@@ -106,7 +109,6 @@ const Lesson1 = () => {
                           alt="relative Interior of light green canvas bag with padded laptop sleeve and internal organization pouch."
                           className="object-cover object-center"
                         />
-                        <div className="w-80 h-80 absolute bg-red top-0 z-10" />
                       </div>
                     </div>
                     <div className="sm:col-span-8 lg:col-span-7">
@@ -195,6 +197,8 @@ const Lesson1 = () => {
           </div>
         )}
       </AnimatePresence>
+      {allCompleted && <LessonComplete />}
+      <LessonComplete />
     </section>
   );
 };
