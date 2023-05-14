@@ -8,7 +8,7 @@ import Lesson2 from "../components/lesson/Lesson2";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Quest = () => {
-  const [lessonProgress, setLessonProgress] = useState(2);
+  const [lessonProgress, setLessonProgress] = useState(1);
 
   useEffect(() => {
     scrollToTop();
