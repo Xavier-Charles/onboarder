@@ -3,11 +3,11 @@ import { useParams } from "@reach/router";
 import CONFIG from "../config";
 
 export default () => {
-  const { slug } = useParams();
+  const params = useParams();
   const PARTNER_CONFIG = useMemo(
-    () => CONFIG.PARTNERS_CONFIG.find((partner) => partner.SLUG === slug),
-    [slug]
+    () => CONFIG.PARTNERS_CONFIG.find((partner) => partner.SLUG === params?.slug),
+    [params?.slug]
   );
-  console.log(slug, PARTNER_CONFIG);
+  console.log(params?.slug, PARTNER_CONFIG);
   return PARTNER_CONFIG;
 };
