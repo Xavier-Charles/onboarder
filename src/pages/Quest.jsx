@@ -1,17 +1,14 @@
-import { useEffect } from "react";
 import TransitionAnimation from "../components/transitions/TransitionAnimationX";
 import Hero from "../components/quest/Hero";
 import { Helmet } from "react-helmet";
 import { Header } from "../components/Header";
-import { scrollToTop } from "../utils/scrollTo";
 import CONFIG from "../config";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 const { TITLE, DESCRIPTION } = CONFIG.PARTNERS_CONFIG.GREEN_FIELD.SEO;
 
 const Quest = () => {
-  useEffect(() => {
-    scrollToTop();
-  }, []);
+  useScrollToTop();
 
   return (
     <section>

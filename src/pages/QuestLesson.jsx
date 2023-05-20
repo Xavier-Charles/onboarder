@@ -2,17 +2,16 @@ import { useEffect, useState } from "react";
 import TransitionAnimation from "../components/transitions/TransitionAnimationY";
 import { Helmet } from "react-helmet";
 import { Header } from "../components/Header";
-import { scrollToElement, scrollToTop } from "../utils/scrollTo";
+import { scrollToElement } from "../utils/scrollTo";
 import Lesson1 from "../components/lesson/Lesson1";
 import Lesson2 from "../components/lesson/Lesson2";
 import { AnimatePresence, motion } from "framer-motion";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 const Quest = () => {
   const [lessonProgress, setLessonProgress] = useState(1);
 
-  useEffect(() => {
-    scrollToTop();
-  }, []);
+  useScrollToTop();
 
   useEffect(() => {
     if (lessonProgress > 1) {
