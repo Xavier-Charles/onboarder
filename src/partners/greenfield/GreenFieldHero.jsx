@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 import greenfield from "../../assets/img/quests/greenfieldHero.png";
 import { navigate } from "@reach/router";
-import CONFIG from "../../config";
 
-const { SLUG } = CONFIG.PARTNERS_CONFIG.GREEN_FIELD;
-
-const Hero = () => {
+const GreenFieldHero = ({ slug }) => {
   return (
     <div className="bg-oxford min-h-screen">
       <div className="relative isolate pt-14">
@@ -53,7 +50,7 @@ const Hero = () => {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <motion.button
-                onClick={() => navigate(`/q/${SLUG}/lessons`)}
+                onClick={() => navigate(`/q/${slug}/lessons`)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="rounded-md bg-[#079e0c]/80 px-5 py-3.5 font-semibold text-white shadow-sm hover:bg-[#f2c057]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
@@ -87,4 +84,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default GreenFieldHero;

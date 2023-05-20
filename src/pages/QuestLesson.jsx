@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
-import TransitionAnimation from "../components/transitions/TransitionAnimationY";
 import { Helmet } from "react-helmet";
+import TransitionAnimation from "../components/transitions/TransitionAnimationY";
 import { Header } from "../components/Header";
 import { scrollToElement } from "../utils/scrollTo";
-import Lesson1 from "../components/lesson/Lesson1";
-import Lesson2 from "../components/lesson/Lesson2";
 import { AnimatePresence, motion } from "framer-motion";
 import useScrollToTop from "../hooks/useScrollToTop";
+import usePartner from "../hooks/usePartner";
 
 const Quest = () => {
   const [lessonProgress, setLessonProgress] = useState(1);
-
+  const PARTNER_CONFIG = usePartner();
   useScrollToTop();
 
   useEffect(() => {
@@ -18,6 +17,14 @@ const Quest = () => {
       scrollToElement("l2");
     }
   }, [lessonProgress]);
+
+  if (!PARTNER_CONFIG) {
+    return <div>404</div>;
+  }
+
+  const {
+    COMPONENTS: { LESSON_ONE, LESSON_TWO },
+  } = PARTNER_CONFIG;
 
   return (
     <section className="min-h-screen min-w-screen grad-l1">
@@ -39,7 +46,7 @@ const Quest = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <Lesson1 onLessonComplete={setLessonProgress} />
+            <LESSON_ONE onLessonComplete={setLessonProgress} />
           </motion.div>
         )}
         {lessonProgress === 2 && (
@@ -49,7 +56,7 @@ const Quest = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <Lesson2 onLessonComplete={setLessonProgress} />
+            <LESSON_TWO onLessonComplete={setLessonProgress} />
           </motion.div>
         )}
       </AnimatePresence>

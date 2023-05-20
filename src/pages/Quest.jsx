@@ -1,23 +1,31 @@
-import TransitionAnimation from "../components/transitions/TransitionAnimationX";
-import Hero from "../components/quest/Hero";
 import { Helmet } from "react-helmet";
+import TransitionAnimation from "../components/transitions/TransitionAnimationX";
 import { Header } from "../components/Header";
-import CONFIG from "../config";
 import useScrollToTop from "../hooks/useScrollToTop";
-
-const { TITLE, DESCRIPTION } = CONFIG.PARTNERS_CONFIG.GREEN_FIELD.SEO;
+import usePartner from "../hooks/usePartner";
 
 const Quest = () => {
   useScrollToTop();
+  const PARTNER_CONFIG = usePartner();
+
+  if (!PARTNER_CONFIG) {
+    return <div>404</div>;
+  }
+
+  const {
+    SLUG,
+    SEO: { TITLE, DESCRIPTION },
+    COMPONENTS: { HERO },
+  } = PARTNER_CONFIG;
 
   return (
     <section>
       <Helmet>
-        <title>{TITLE} </title>
+        <title>{TITLE}</title>
         <meta name="description" content={DESCRIPTION} />
       </Helmet>
       <Header />
-      <Hero />
+      <HERO slug={SLUG} />
       <TransitionAnimation />
     </section>
   );
