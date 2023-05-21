@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ReactHtmlParser from "react-html-parser";
 import Card from "../../components/lesson/Card";
-import { lesson2Questions } from "../../api/mockData/greenfield/lesson2Questions";
+import { lesson2Questions } from "../../api/mockData/thetaVideo/lesson2Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -25,7 +25,7 @@ const BlockQuoteSVG = ({ classes }) => (
   </svg>
 );
 
-const GreenFieldLesson2 = ({ onLessonComplete }) => {
+const Lesson2 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
     lesson2Questions.map((item) => ({ id: item.id, completed: false }))
@@ -52,7 +52,7 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            Wallet Configuration
+            Theta Video API
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
@@ -176,4 +176,4 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
   );
 };
 
-export default GreenFieldLesson2;
+export default Lesson2;
