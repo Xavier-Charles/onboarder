@@ -4,6 +4,12 @@ import {
   GreenFieldLesson2,
 } from "../partners/greenfield";
 
+import {
+  ThetaVideoHero,
+  ThetaVideoLesson1,
+  ThetaVideoLesson2,
+} from "../partners/theta";
+
 const CONFIG = {
   SEO: {
     TITLE: "Onboarder - Seamlessly Onboard to Web3 Products and Protocols",
@@ -22,6 +28,20 @@ const CONFIG = {
         HERO: GreenFieldHero,
         LESSON_ONE: GreenFieldLesson1,
         LESSON_TWO: GreenFieldLesson2,
+      },
+    },
+    {
+      SLUG: "theta-network",
+      SEO: {
+        TITLE:
+          "Onboarder - Learn about the Theta Network's Video Infrastructure",
+        DESCRIPTION:
+          "Learn how to lower your cost to encode, store and deliver video with Theta's Video Infrastructure, in 5 steps with Onboarder.",
+      },
+      COMPONENTS: {
+        HERO: ThetaVideoHero,
+        LESSON_ONE: ThetaVideoLesson1,
+        LESSON_TWO: ThetaVideoLesson2,
       },
     },
   ],
