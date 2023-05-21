@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import greenfield from "../../assets/img/quests/greenfieldHero.png";
 import { navigate } from "@reach/router";
 
-const Hero = () => {
+const GreenFieldHero = ({ slug }) => {
   return (
     <div className="bg-oxford min-h-screen">
       <div className="relative isolate pt-14">
-        {/* grid lines svg start */}
         <svg
           className="absolute inset-0 -z-10 h-full w-full stroke-sunglow/80 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
           aria-hidden="true"
@@ -51,7 +50,7 @@ const Hero = () => {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <motion.button
-                onClick={() => navigate("/lessons/greenfield")}
+                onClick={() => navigate(`/q/${slug}/lessons`)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="rounded-md bg-[#079e0c]/80 px-5 py-3.5 font-semibold text-white shadow-sm hover:bg-[#f2c057]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
@@ -85,4 +84,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default GreenFieldHero;

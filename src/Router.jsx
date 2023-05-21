@@ -1,4 +1,3 @@
-
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import Quest from "./pages/Quest";
@@ -23,8 +22,8 @@ function AppRouter() {
   return (
     <FramerRouter>
       <Home path="/" />
-      <Quest path="q/:slug"></Quest>
-      <QuestLesson path="lessons/:slug" />
+      <Quest path="q/:slug" />
+      <QuestLesson path="q/:slug/lessons" />
     </FramerRouter>
   );
 }

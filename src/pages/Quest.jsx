@@ -1,28 +1,31 @@
-import { useEffect } from "react";
-import TransitionAnimation from "../components/transitions/TransitionAnimationX";
-import Hero from "../components/quest/Hero";
 import { Helmet } from "react-helmet";
+import TransitionAnimation from "../components/transitions/TransitionAnimationX";
 import { Header } from "../components/Header";
-import { scrollToTop } from "../utils/scrollTo";
+import useScrollToTop from "../hooks/useScrollToTop";
+import usePartner from "../hooks/usePartner";
 
 const Quest = () => {
-  useEffect(() => {
-    scrollToTop();
-  }, []);
+  useScrollToTop();
+  const PARTNER_CONFIG = usePartner();
+
+  if (!PARTNER_CONFIG) {
+    return <div>404</div>;
+  }
+
+  const {
+    SLUG,
+    SEO: { TITLE, DESCRIPTION },
+    COMPONENTS: { HERO },
+  } = PARTNER_CONFIG;
 
   return (
     <section>
       <Helmet>
-        <title>
-          Onboarder - Seamlessly Onboard to Web3 Products and Protocols
-        </title>
-        <meta
-          name="description"
-          content="Onboarder is a Web3 onboarding solution that allows users to seamlessly onboard to decentralized products and protocols."
-        />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESCRIPTION} />
       </Helmet>
       <Header />
-      <Hero />
+      <HERO slug={SLUG} />
       <TransitionAnimation />
     </section>
   );
