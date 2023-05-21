@@ -113,7 +113,7 @@ const GreenFieldLesson1 = ({ onLessonComplete }) => {
                       <div className="relative aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
                         <img
                           src={selectedItem.img}
-                          alt="relative Interior of light green canvas bag with padded laptop sleeve and internal organization pouch."
+                          alt="lesson"
                           className="object-cover object-center"
                         />
                       </div>

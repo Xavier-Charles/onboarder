@@ -19,7 +19,7 @@ const LessonComplete = ({ onLessonComplete, lessonId, resetCardProgress }) => {
                 <div className="relative aspect-h-1 aspect-w-1 overflow-hidden">
                   <img
                     src={lessonCompleteImg}
-                    alt="relative Interior of light green canvas bag with padded laptop sleeve and internal organization pouch."
+                    alt="lesson"
                     className="object-cover object-center"
                   />
                 </div>
