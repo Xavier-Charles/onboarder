@@ -1,6 +1,7 @@
 import bnbgreenfield from "../../assets/img/projects/bnbgreenfield.jpg";
 import nodereal from "../../assets/img/projects/nodereal.jpg";
 import axelar from "../../assets/img/projects/axelar.jpg";
+import theta from "../../assets/img/projects/theta.jpg";
 
 export const questsList = [
   {
@@ -32,5 +33,15 @@ export const questsList = [
     img: axelar,
     imgPos: "object-left",
     colors: ["#1ea4c2"],
+  },
+  {
+    id: 4,
+    slug: "theta",
+    title: "Theta Network",
+    start: "2023-05-21T09:30:00",
+    end: "2023-08-08T11:59:00",
+    img: theta,
+    imgPos: "object-center",
+    colors: ["#23d1d0"],
   },
 ];
