@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 import { AnimatePresence, motion } from "framer-motion";
 import Card from "../../components/lesson/Card";
-import { entryQuestions } from "../../api/mockData/entryQuestions";
+import { lesson1Questions } from "../../api/mockData/greenfield/lesson1Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -26,14 +26,14 @@ const BlockQuoteSVG = ({ classes }) => (
 const GreenFieldLesson1 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
-    entryQuestions.map((item) => ({ id: item.id, completed: false }))
+    lesson1Questions.map((item) => ({ id: item.id, completed: false }))
   );
   const [showCardQA, setShowCardQA] = useState(false);
   const [selectedOptionId, setSelectedOptionId] = useState(null);
 
   const containerRef = useClickOutside(() => {});
 
-  const selectedItem = entryQuestions.find((item) => item.id === selectedId);
+  const selectedItem = lesson1Questions.find((item) => item.id === selectedId);
 
   const onCloseModal = () => {
     setSelectedId(null);
@@ -43,7 +43,7 @@ const GreenFieldLesson1 = ({ onLessonComplete }) => {
 
   const resetCardProgress = () => {
     setCardProgress(
-      entryQuestions.map((item) => ({ id: item.id, completed: false }))
+      lesson1Questions.map((item) => ({ id: item.id, completed: false }))
     );
   };
   const showAllCompleteModal =
@@ -60,7 +60,7 @@ const GreenFieldLesson1 = ({ onLessonComplete }) => {
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
-          {Object.values(entryQuestions).map((item) => (
+          {Object.values(lesson1Questions).map((item) => (
             <Card
               item={item}
               lesson="BASICS"
