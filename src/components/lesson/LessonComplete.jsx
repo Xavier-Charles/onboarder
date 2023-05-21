@@ -26,7 +26,7 @@ const LessonComplete = ({ onLessonComplete, lessonId, resetCardProgress }) => {
               </div>
               <div className="sm:col-span-8 lg:col-span-7">
                 <motion.h2 className="text-2xl font-bold text-gray-900 sm:pr-12">
-                  Lesson 1 Complete !!!
+                  Lesson {lessonId} Complete !!!
                 </motion.h2>
 
                 <section aria-labelledby="information-heading" className="mt-4">
