@@ -31,7 +31,7 @@ const CONFIG = {
       },
     },
     {
-      SLUG: "theta-network",
+      SLUG: "theta-video",
       SEO: {
         TITLE:
           "Onboarder - Learn about the Theta Network's Video Infrastructure",
