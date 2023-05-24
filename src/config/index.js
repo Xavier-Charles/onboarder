@@ -44,6 +44,20 @@ const CONFIG = {
         LESSON_TWO: ThetaVideoLesson2,
       },
     },
+    // {
+    //   SLUG: "gnosis",
+    //   SEO: {
+    //     TITLE:
+    //       "Onboarder - Explore Gnosis Chain, the community run chain",
+    //     DESCRIPTION:
+    //       "Learn about one of the first Ethereum sidechains and has stayed true to its values, Gnosis Chain, in 5 steps with Onboarder.",  
+    //   },
+    //   COMPONENTS: {
+    //     HERO: ThetaVideoHero,
+    //     LESSON_ONE: ThetaVideoLesson1,
+    //     LESSON_TWO: ThetaVideoLesson2,
+    //   },
+    // },
   ],
 };
 
