@@ -8,6 +8,5 @@ export default () => {
     () => CONFIG.PARTNERS_CONFIG.find((partner) => partner.SLUG === params?.slug),
     [params?.slug]
   );
-  console.log(params?.slug, PARTNER_CONFIG);
   return PARTNER_CONFIG;
 };

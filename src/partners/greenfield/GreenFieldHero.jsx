@@ -39,7 +39,6 @@ const GreenFieldHero = ({ slug }) => {
 
         <div className="mx-auto max-w-7xl px-6 py-24 pt-10 sm:pb-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:pb-40">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <div className="flex"></div>
             <h1 className="mt-10 max-w-lg text-5xl font-bold tracking-tight text-magwhite sm:text-7xl">
               BNB GREENFIELD
             </h1>
@@ -51,9 +50,9 @@ const GreenFieldHero = ({ slug }) => {
             <div className="mt-10 flex items-center gap-x-6">
               <motion.button
                 onClick={() => navigate(`/q/${slug}/lessons`)}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="rounded-md bg-[#079e0c]/80 px-5 py-3.5 font-semibold text-white shadow-sm hover:bg-[#f2c057]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="rounded-md bg-[#079e0c]/80 px-5 py-3.5 font-semibold text-white shadow-sm hover:bg-[#079e0c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
               >
                 Start Quest
               </motion.button>

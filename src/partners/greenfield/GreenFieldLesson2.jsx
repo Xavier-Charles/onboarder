@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ReactHtmlParser from "react-html-parser";
 import Card from "../../components/lesson/Card";
-import { setupQuestions } from "../../api/mockData/setupQuestions";
+import { lesson2Questions } from "../../api/mockData/greenfield/lesson2Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -28,14 +28,14 @@ const BlockQuoteSVG = ({ classes }) => (
 const GreenFieldLesson2 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
-    setupQuestions.map((item) => ({ id: item.id, completed: false }))
+    lesson2Questions.map((item) => ({ id: item.id, completed: false }))
   );
   const [showCardQA, setShowCardQA] = useState(false);
   const [selectedOptionId, setSelectedOptionId] = useState(null);
 
   const containerRef = useClickOutside(() => {});
 
-  const selectedItem = setupQuestions.find((item) => item.id === selectedId);
+  const selectedItem = lesson2Questions.find((item) => item.id === selectedId);
 
   const onCloseModal = () => {
     setSelectedId(null);
@@ -56,7 +56,7 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
-          {Object.values(setupQuestions).map((item) => (
+          {Object.values(lesson2Questions).map((item) => (
             <Card
               item={item}
               lesson="WALLET CONFIGURATION"
@@ -110,7 +110,7 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
                       <div className="relative aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
                         <img
                           src={selectedItem.img}
-                          alt="relative Interior of light green canvas bag with padded laptop sleeve and internal organization pouch."
+                          alt="lesson"
                           className="object-cover object-center"
                         />
                       </div>

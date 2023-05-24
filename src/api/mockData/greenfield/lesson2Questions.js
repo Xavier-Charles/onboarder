@@ -1,9 +1,9 @@
-import q5 from "../../assets/img/questions/q5.png";
-import q6 from "../../assets/img/questions/q6.png";
-import q7 from "../../assets/img/questions/q7.png";
-import q8 from "../../assets/img/questions/q8.png";
+import q5 from "../../../assets/img/questions/greenfield/q5.png";
+import q6 from "../../../assets/img/questions/greenfield/q6.png";
+import q7 from "../../../assets/img/questions/greenfield/q7.png";
+import q8 from "../../../assets/img/questions/greenfield/q8.png";
 
-export const setupQuestions = [
+export const lesson2Questions = [
   {
     id: 5,
     title: "Setting up your Wallet",

@@ -1,9 +1,10 @@
-import q1 from "../../assets/img/questions/q1.png";
-import q2 from "../../assets/img/questions/q2.png";
-import q3 from "../../assets/img/questions/q3.png";
-import q4 from "../../assets/img/questions/q4.png";
+import q1 from "../../../assets/img/questions/greenfield/q1.png";
+import q2 from "../../../assets/img/questions/greenfield/q2.png";
+import q3 from "../../../assets/img/questions/greenfield/q3.png";
+import q4 from "../../../assets/img/questions/greenfield/q4.png";
 
-export const entryQuestions = [
+
+export const lesson1Questions = [
   {
     id: 1,
     title: "Introduction to BNB Greenfield",
