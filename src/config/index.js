@@ -10,6 +10,12 @@ import {
   ThetaVideoLesson2,
 } from "../partners/theta";
 
+import {
+  GnosisHero,
+  GnosisLesson1,
+  GnosisLesson2,
+} from "../partners/gnosis";
+
 const CONFIG = {
   SEO: {
     TITLE: "Onboarder - Seamlessly Onboard to Web3 Products and Protocols",
@@ -44,20 +50,20 @@ const CONFIG = {
         LESSON_TWO: ThetaVideoLesson2,
       },
     },
-    // {
-    //   SLUG: "gnosis",
-    //   SEO: {
-    //     TITLE:
-    //       "Onboarder - Explore Gnosis Chain, the community run chain",
-    //     DESCRIPTION:
-    //       "Learn about one of the first Ethereum sidechains and has stayed true to its values, Gnosis Chain, in 5 steps with Onboarder.",  
-    //   },
-    //   COMPONENTS: {
-    //     HERO: ThetaVideoHero,
-    //     LESSON_ONE: ThetaVideoLesson1,
-    //     LESSON_TWO: ThetaVideoLesson2,
-    //   },
-    // },
+    {
+      SLUG: "gnosis",
+      SEO: {
+        TITLE:
+          "Onboarder - Explore Gnosis Chain, the community run chain",
+        DESCRIPTION:
+          "Learn about one of the first Ethereum sidechains and has stayed true to its values, Gnosis Chain, in 5 steps with Onboarder.",  
+      },
+      COMPONENTS: {
+        HERO: GnosisHero,
+        LESSON_ONE: GnosisLesson1,
+        LESSON_TWO: GnosisLesson2,
+      },
+    },
   ],
 };
 

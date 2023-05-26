@@ -23,7 +23,7 @@ const BlockQuoteSVG = ({ classes }) => (
   </svg>
 );
 
-const GreenFieldLesson1 = ({ onLessonComplete }) => {
+const ThetaVideoLesson1 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
     lesson1Questions.map((item) => ({ id: item.id, completed: false }))
@@ -216,4 +216,4 @@ const GreenFieldLesson1 = ({ onLessonComplete }) => {
   );
 };
 
-export default GreenFieldLesson1;
+export default ThetaVideoLesson1;
