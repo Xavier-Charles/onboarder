@@ -1,33 +1,37 @@
 import { motion } from "framer-motion";
-import stars from "../../assets/img/quests/stars.jpg";
+import world from "../../assets/img/quests/world-gnosis.png";
 import { navigate } from "@reach/router";
 
 const GnosisHero = ({ slug }) => {
   return (
-    <div className="bg-oxford min-h-screen">
-      <img
-        src={stars}
+    <div className="bg-[#o] min-h-screen">
+      <div
         alt="backgound-image"
-        className="absolute object-cover inset-0 w-full h-full"
+        className="absolute inset-0 bg-[linear-gradient(145deg,#3e6957,#133629)]"
       />
+      <img
+        src={world}
+        alt="backgound-image"
+        className="absolute object-contain bottom-0 right-0 w-[50%] h-[90%] "
+      />
+
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <h1 className="mx-auto mt-10 max-w-2xl text-5xl font-bold text-center tracking-normal text-magwhite sm:text-7xl">
-              THETA VIDEO INFRASTRUCTURE
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 sm:py-48 lg:py-56">
+          <div className="max-w-2xl">
+            <h1 className="mx-auto mt-10 max-w-2xl text-5xl font-bold text-left tracking-normal text-magwhite sm:text-7xl">
+              GNOSIS CHAIN
             </h1>
-            <p className="mt-6 text-lg leading-8 text-slate/90 text-center">
-              Leverage the robust capabilities of completely decentralized
-              encoding, storage, and peer-to-peer distribution, facilitated by
-              over 100,000 worldwide edge nodes while decreasing your content
-              delivery costs.
+            <p className="mt-6 text-lg leading-8 text-slate/90 text-left pr-16">
+              Learn to build on infrastructure for the open-internet. A
+              resilient and credibly neutral network open to anyone without
+              privilege or prejudice.
             </p>
-            <div className="mx-auto mt-10 flex items-center gap-x-6 w-64">
+            <div className="mt-10 flex items-center gap-x-6 w-64">
               <motion.button
                 onClick={() => navigate(`/q/${slug}/lessons`)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="rounded-md bg-[#23d1d0]/80 px-5 py-3.5 font-semibold text-magwhite shadow-sm hover:bg-[#23d1d0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
+                className="rounded-md bg-[#3e6957]/80 px-5 py-3.5 font-semibold text-magwhite shadow-sm hover:bg-[#3e6957] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
               >
                 Start Quest
               </motion.button>
