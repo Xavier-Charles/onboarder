@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ReactHtmlParser from "react-html-parser";
 import Card from "../../components/lesson/Card";
-import { lesson2Questions } from "../../api/mockData/thetaVideo/lesson2Questions";
+import { lesson2Questions } from "../../api/mockData/gnosis/lesson2Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -52,7 +52,7 @@ const GnosisLesson2 = ({ onLessonComplete }) => {
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            Theta Video API
+            Gnosis Safe
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
@@ -65,7 +65,7 @@ const GnosisLesson2 = ({ onLessonComplete }) => {
               layoutId={`l2-${item.id}`}
               type={item.type}
               isCompleted={
-                cardProgress.find((pItem) => pItem.id === item.id).completed
+                cardProgress.find((pItem) => pItem.id === item.id)?.completed
               }
             />
           ))}

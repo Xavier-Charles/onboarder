@@ -1,0 +1,93 @@
+import q5 from "../../../assets/img/questions/greenfield/q5.png";
+import q6 from "../../../assets/img/questions/gnosis/q6.png";
+import q7 from "../../../assets/img/questions/greenfield/q7.png";
+import q8 from "../../../assets/img/questions/greenfield/q8.png";
+
+export const lesson2Questions = [
+  {
+    id: 5,
+    title: "Understanding Wallet Security in Crypto",
+    subtitle:
+      "The risks associated with single key wallets and the need for better solutions",
+    summary:
+      "Most crypto users use single key wallets, also known as externally owned accounts (EOAs), such as MetaMask, Trustwallet, and Exodus, secured with a 12-word seed phrase that transforms into a user's private key. However, if the private key is compromised, funds can be stolen. This form of wallet is especially risky for projects involving more than one person, as any mishandling of the private key can lead to a permanent loss of funds. Therefore, there's a need for a more secure solution to manage crypto funds.",
+    img: q5,
+    question: "What is the risk associated with single key wallets or EOAs?",
+    options: {
+      1: { id: 1, value: "They can't store large amounts of cryptocurrency" },
+      2: { id: 2, value: "They are vulnerable to private key compromise" },
+      3: { id: 3, value: "They are not widely supported by crypto exchanges" },
+    },
+    answer: 2,
+    classes: "lg:w-1/3",
+  },
+  {
+    id: 6,
+    title: "Safe: A Solution for Crypto Security",
+    subtitle:
+      "Exploring the benefits and security features of safe multisig wallet",
+    summary:
+      "Safe is a smart contract wallet operating on multiple blockchains, introduces the concept of multisig (M-of-N) wallets. This allows for a minimum number of people to approve a transaction before it can be executed. For instance, a business with three main stakeholders could require approval from two out of three or all three members for a transaction to be sent, ensuring funds can't be compromised by a single individual. Safe provides complete self custody over funds, with the deployed smart contract being trustless and entirely under user control.",
+    img: q6,
+    question: "What is the key feature of a multisig wallet?",
+    options: {
+      1: { id: 1, value: "It allows instant transactions" },
+      2: {
+        id: 2,
+        value:
+          "It requires approval from a minimum number of people for transactions",
+      },
+      3: { id: 3, value: "It allows unlimited number of transactions per day" },
+    },
+    answer: 2,
+    classes: "lg:w-2/3",
+  },
+  {
+    id: 7,
+    title: "Create a Safe Multisig Wallet",
+    subtitle:
+      "The most trusted decentralized custody protocol and collective asset management wallet",
+
+    summary: `<ol class="list-decimal pl-5">
+              <li>Visit <a class="text-jetbrown underline" target="_blank" href="https://app.safe.global/">app.safe.global</a> to create your own safe</li>
+              <li>Click <strong>Connect Wallet.</strong> and choose any of the available wallets you own</li>
+              <li>Next, click <strong>Create new Safe</strong></li>
+              <liAdd a name for your safe and select a network. You can use <strong>Goerli</strong> testnet to try it out</li>
+              <li>This would require some goerli tokens. If you don't get some from a goerli faucet</li>
+              <li>Confirm the transaction. Once it the transaction is complete you'll have a brand new Safe!</li>
+              </ol>
+             `,
+    img: q7,
+    question:
+      "Did you upload a video to the Theta Video API and get a playable link to add to your site?",
+    options: {
+      1: { id: 1, value: "Yes I have!" },
+      2: { id: 2, value: "No I haven't" },
+    },
+    answer: 1,
+  },
+  {
+    id: 8,
+    title: "Get test BNB",
+    subtitle: "Get testnet BNB on the greenfield network from the faucet.",
+
+    summary: `<ol class="list-decimal pl-5">
+              <li>Visit <a class="text-jetbrown underline" target="_blank" href="https://gnfd-bsc-faucet.bnbchain.org/">Greenfield BSC Testnet Faucet</a>.</li>
+              <li>Click Tweet to make a tweet.</li>
+
+              <li>Replace <strong>0x000000000000000000000000000000000000000</strong> with your BSC address.</li>
+
+              <li>Find your tweet URL and copy it to request for tBNBs.</li>
+              <li>After receiving tBNBs, you can check them in your wallet.</li>
+
+              <li>After that come back here and verify.</li>
+              </ol>
+             `,
+    img: q8,
+    question:
+      "Once you connect your wallet, we will check if you've have tBnB.",
+    answer: 0.0001,
+    type: "verify-balance",
+    classes: "lg:w-9/12",
+  },
+];
