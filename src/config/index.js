@@ -14,6 +14,7 @@ import {
   GnosisHero,
   GnosisLesson1,
   GnosisLesson2,
+  GnosisLesson3,
 } from "../partners/gnosis";
 
 const CONFIG = {
@@ -53,15 +54,15 @@ const CONFIG = {
     {
       SLUG: "gnosis",
       SEO: {
-        TITLE:
-          "Onboarder - Explore Gnosis Chain, the community run chain",
+        TITLE: "Onboarder - Explore Gnosis Chain, the community run chain",
         DESCRIPTION:
-          "Learn about one of the first Ethereum sidechains and has stayed true to its values, Gnosis Chain, in 5 steps with Onboarder.",  
+          "Learn about one of the first Ethereum sidechains and has stayed true to its values, Gnosis Chain, in 5 steps with Onboarder.",
       },
       COMPONENTS: {
         HERO: GnosisHero,
         LESSON_ONE: GnosisLesson1,
         LESSON_TWO: GnosisLesson2,
+        LESSON_THREE: GnosisLesson3,
       },
     },
   ],

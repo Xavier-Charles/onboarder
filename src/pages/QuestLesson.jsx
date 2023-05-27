@@ -8,7 +8,7 @@ import useScrollToTop from "../hooks/useScrollToTop";
 import usePartner from "../hooks/usePartner";
 
 const Quest = () => {
-  const [lessonProgress, setLessonProgress] = useState(2);
+  const [lessonProgress, setLessonProgress] = useState(3);
   const PARTNER_CONFIG = usePartner();
   useScrollToTop();
 
@@ -23,7 +23,7 @@ const Quest = () => {
   }
 
   const {
-    COMPONENTS: { LESSON_ONE, LESSON_TWO },
+    COMPONENTS: { LESSON_ONE, LESSON_TWO, LESSON_THREE },
   } = PARTNER_CONFIG;
 
   return (
@@ -57,6 +57,16 @@ const Quest = () => {
             exit={{ opacity: 0 }}
           >
             <LESSON_TWO onLessonComplete={setLessonProgress} />
+          </motion.div>
+        )}
+        {lessonProgress === 3 && LESSON_THREE && (
+          <motion.div
+            key="lesson2-quest"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <LESSON_THREE onLessonComplete={setLessonProgress} />
           </motion.div>
         )}
       </AnimatePresence>

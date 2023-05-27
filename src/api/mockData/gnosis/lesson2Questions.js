@@ -50,9 +50,9 @@ export const lesson2Questions = [
 
     summary: `<ol class="list-decimal pl-5">
               <li>Visit <a class="text-jetbrown underline" target="_blank" href="https://app.safe.global/">app.safe.global</a> to create your own safe</li>
-              <li>Click <strong>Connect Wallet.</strong> and choose any of the available wallets you own</li>
+              <li>Click <strong>Connect Wallet</strong> and choose any of the available wallets you own</li>
               <li>Next, click <strong>Create new Safe</strong></li>
-              <liAdd a name for your safe and select a network. You can use <strong>Goerli</strong> testnet to try it out</li>
+              <li>Add a name for your safe and select a network. You can use <strong>Goerli</strong> testnet to try it out</li>
               <li>This would require some goerli tokens. If you don't get some from a goerli faucet</li>
               <li>Confirm the transaction. Once it the transaction is complete you'll have a brand new Safe!</li>
               </ol>
@@ -72,7 +72,7 @@ export const lesson2Questions = [
     title: "The Safe Apps ecosystem",
     subtitle:
       "Learn about web3 applications you can connect securely and efficiently to your Safe",
-    summary: `On the menu tab byt the left, click the Apps option or go to
+    summary: `On the side menu to the left, click the Apps option or go to
               <a class="text-jetbrown underline" target="_blank" href="https://app.safe.global/apps">app.safe.global/apps</a> page. 
               You can find a list of web3 applications that you can connect to your Safe. You can also build your own Safe App and submit it to the Safe Apps page.
               <br /> These Apps extend the functionality of your Safe and allow you to interact with your funds in new ways.
