@@ -1,7 +1,7 @@
 import q5 from "../../../assets/img/questions/greenfield/q5.png";
 import q6 from "../../../assets/img/questions/gnosis/q6.png";
 import q7 from "../../../assets/img/questions/greenfield/q7.png";
-import q8 from "../../../assets/img/questions/greenfield/q8.png";
+import q8 from "../../../assets/img/questions/gnosis/q8.png";
 
 export const lesson2Questions = [
   {
@@ -65,29 +65,27 @@ export const lesson2Questions = [
       2: { id: 2, value: "No I haven't" },
     },
     answer: 1,
+    classes: "lg:w-1/3",
   },
   {
     id: 8,
-    title: "Get test BNB",
-    subtitle: "Get testnet BNB on the greenfield network from the faucet.",
-
-    summary: `<ol class="list-decimal pl-5">
-              <li>Visit <a class="text-jetbrown underline" target="_blank" href="https://gnfd-bsc-faucet.bnbchain.org/">Greenfield BSC Testnet Faucet</a>.</li>
-              <li>Click Tweet to make a tweet.</li>
-
-              <li>Replace <strong>0x000000000000000000000000000000000000000</strong> with your BSC address.</li>
-
-              <li>Find your tweet URL and copy it to request for tBNBs.</li>
-              <li>After receiving tBNBs, you can check them in your wallet.</li>
-
-              <li>After that come back here and verify.</li>
-              </ol>
+    title: "The Safe Apps ecosystem",
+    subtitle:
+      "Learn about web3 applications you can connect securely and efficiently to your Safe",
+    summary: `On the menu tab byt the left, click the Apps option or go to
+              <a class="text-jetbrown underline" target="_blank" href="https://app.safe.global/apps">app.safe.global/apps</a> page. 
+              You can find a list of web3 applications that you can connect to your Safe. You can also build your own Safe App and submit it to the Safe Apps page.
+              <br /> These Apps extend the functionality of your Safe and allow you to interact with your funds in new ways.
              `,
     img: q8,
     question:
-      "Once you connect your wallet, we will check if you've have tBnB.",
-    answer: 0.0001,
-    type: "verify-balance",
-    classes: "lg:w-9/12",
+      "Which of these apps is not available on the Safe Apps page? (Hint: You can find the answer on the Safe Apps page)",
+    options: {
+      1: { id: 1, value: "Drain Account" },
+      2: { id: 2, value: "Pancake swap" },
+      3: { id: 3, value: "DexFiat" },
+    },
+    answer: 3,
+    classes: "lg:w-2/3",
   },
 ];

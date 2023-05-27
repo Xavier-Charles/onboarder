@@ -52,14 +52,14 @@ const GnosisLesson2 = ({ onLessonComplete }) => {
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            Gnosis Safe
+            Safe by Gnosis
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
           {Object.values(lesson2Questions).map((item) => (
             <Card
               item={item}
-              lesson="WALLET CONFIGURATION"
+              lesson="SAFE WALLET"
               key={item.id}
               setSelectedId={setSelectedId}
               layoutId={`l2-${item.id}`}
