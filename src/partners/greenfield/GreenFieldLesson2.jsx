@@ -159,7 +159,7 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
                       type={selectedItem.type}
                       isCompleted={
                         cardProgress.find((item) => item.id === selectedItem.id)
-                          .completed
+                          ?.completed
                       }
                     />
                   </div>

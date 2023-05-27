@@ -68,7 +68,7 @@ const ThetaVideoLesson1 = ({ onLessonComplete }) => {
               setSelectedId={setSelectedId}
               layoutId={`l1-${item.id}`}
               isCompleted={
-                cardProgress.find((pItem) => pItem.id === item.id).completed
+                cardProgress.find((pItem) => pItem.id === item.id)?.completed
               }
             />
           ))}
