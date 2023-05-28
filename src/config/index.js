@@ -4,11 +4,7 @@ import {
   GreenFieldLesson2,
 } from "../partners/greenfield";
 
-import {
-  ThetaVideoHero,
-  ThetaVideoLesson1,
-  ThetaVideoLesson2,
-} from "../partners/theta";
+import { ThetaHero, ThetaLesson1, ThetaLesson2 } from "../partners/theta";
 
 import {
   GnosisHero,
@@ -38,7 +34,7 @@ const CONFIG = {
       },
     },
     {
-      SLUG: "theta-video",
+      SLUG: "theta",
       SEO: {
         TITLE:
           "Onboarder - Learn about the Theta Network's Video Infrastructure",
@@ -46,9 +42,9 @@ const CONFIG = {
           "Learn how to lower your cost to encode, store and deliver video with Theta's Video Infrastructure, in 5 steps with Onboarder.",
       },
       COMPONENTS: {
-        HERO: ThetaVideoHero,
-        LESSON_ONE: ThetaVideoLesson1,
-        LESSON_TWO: ThetaVideoLesson2,
+        HERO: ThetaHero,
+        LESSON_ONE: ThetaLesson1,
+        LESSON_TWO: ThetaLesson2,
       },
     },
     {

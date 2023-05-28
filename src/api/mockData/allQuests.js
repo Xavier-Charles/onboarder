@@ -18,8 +18,8 @@ export const questsList = [
   },
   {
     id: 4,
-    slug: "theta-video",
-    title: "Theta Video Infrastructure",
+    slug: "theta",
+    title: "Theta Network",
     start: "2023-05-21T09:30:00",
     end: "2023-08-08T11:59:00",
     img: theta,

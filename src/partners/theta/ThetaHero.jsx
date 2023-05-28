@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import stars from "../../assets/img/quests/stars.jpg";
 import { navigate } from "@reach/router";
 
-const ThetaVideoHero = ({ slug }) => {
+const ThetaHero = ({ slug }) => {
   return (
     <div className="bg-oxford min-h-screen">
       <img
@@ -53,4 +53,4 @@ const ThetaVideoHero = ({ slug }) => {
   );
 };
 
-export default ThetaVideoHero;
+export default ThetaHero;
