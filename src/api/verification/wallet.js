@@ -31,6 +31,8 @@ export const checkBalance = async () => {
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
       });
+      console.log("check balance");
+      console.log(accounts);
       if (accounts[0]) {
         const balance = await window.ethereum.request({
           method: "eth_getBalance",

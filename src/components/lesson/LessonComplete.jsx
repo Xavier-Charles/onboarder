@@ -48,7 +48,7 @@ const LessonComplete = ({ onLessonComplete, lessonId, resetCardProgress }) => {
                     whileTap={{ scale: 0.9 }}
                     className="rounded-md mt-12 bg-teal/90 px-5 py-3.5 font-semibold text-magwhite shadow-sm hover:bg-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
                   >
-                    Lesson 2
+                    Lesson {lessonId + 1}
                   </motion.button>
                 </section>
               </div>

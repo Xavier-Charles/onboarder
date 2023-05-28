@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ReactHtmlParser from "react-html-parser";
 import Card from "../../components/lesson/Card";
-import { lesson2Questions } from "../../api/mockData/greenfield/lesson2Questions";
+import { lesson3Questions } from "../../api/mockData/theta/lesson3Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -26,17 +26,17 @@ const BlockQuoteSVG = ({ classes }) => (
   </svg>
 );
 
-const GreenFieldLesson2 = ({ onLessonComplete }) => {
+const ThetaLesson3 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
-    lesson2Questions.map((item) => ({ id: item.id, completed: false }))
+    lesson3Questions.map((item) => ({ id: item.id, completed: false }))
   );
   const [showCardQA, setShowCardQA] = useState(false);
   const [selectedOptionId, setSelectedOptionId] = useState(null);
 
   const containerRef = useClickOutside(() => {});
 
-  const selectedItem = lesson2Questions.find((item) => item.id === selectedId);
+  const selectedItem = lesson3Questions.find((item) => item.id === selectedId);
 
   const onCloseModal = () => {
     setSelectedId(null);
@@ -53,20 +53,20 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            Wallet Configuration
+            Theta Metachain
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
-          {Object.values(lesson2Questions).map((item) => (
+          {Object.values(lesson3Questions).map((item) => (
             <Card
               item={item}
-              lesson="WALLET CONFIGURATION"
+              lesson="SAFE WALLET"
               key={item.id}
               setSelectedId={setSelectedId}
               layoutId={`l2-${item.id}`}
               type={item.type}
               isCompleted={
-                cardProgress.find((pItem) => pItem.id === item.id).completed
+                cardProgress.find((pItem) => pItem.id === item.id)?.completed
               }
             />
           ))}
@@ -87,7 +87,6 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
               ref={containerRef}
               layoutId={`l2-${selectedId}`}
             >
-              {" "}
               <div className="flex w-full justify-center transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
                 <div className="relative flex flex-col w-full items-center overflow-hidden bg-slate rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
                   <motion.button
@@ -177,10 +176,10 @@ const GreenFieldLesson2 = ({ onLessonComplete }) => {
         )}
       </AnimatePresence>
       {allCompleted && (
-        <LessonComplete onLessonComplete={onLessonComplete} lessonId={2} />
+        <LessonComplete onLessonComplete={onLessonComplete} lessonId={3} />
       )}
     </section>
   );
 };
 
-export default GreenFieldLesson2;
+export default ThetaLesson3;

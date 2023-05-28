@@ -1,7 +1,7 @@
-import q1 from "../../../assets/img/questions/thetaVideo/q1.png";
-import q2 from "../../../assets/img/questions/thetaVideo/q2.png";
-import q3 from "../../../assets/img/questions/thetaVideo/q3.png";
-import q4 from "../../../assets/img/questions/thetaVideo/q4.png";
+import q1 from "../../../assets/img/questions/theta/q1.png";
+import q2 from "../../../assets/img/questions/theta/q2.png";
+import q3 from "../../../assets/img/questions/theta/q3.png";
+import q4 from "../../../assets/img/questions/theta/q4.png";
 
 export const lesson1Questions = [
   {

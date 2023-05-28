@@ -5,10 +5,18 @@ import {
 } from "../partners/greenfield";
 
 import {
-  ThetaVideoHero,
-  ThetaVideoLesson1,
-  ThetaVideoLesson2,
+  ThetaHero,
+  ThetaLesson1,
+  ThetaLesson2,
+  ThetaLesson3,
 } from "../partners/theta";
+
+import {
+  GnosisHero,
+  GnosisLesson1,
+  GnosisLesson2,
+  GnosisLesson3,
+} from "../partners/gnosis";
 
 const CONFIG = {
   SEO: {
@@ -31,7 +39,7 @@ const CONFIG = {
       },
     },
     {
-      SLUG: "theta-video",
+      SLUG: "theta",
       SEO: {
         TITLE:
           "Onboarder - Learn about the Theta Network's Video Infrastructure",
@@ -39,9 +47,24 @@ const CONFIG = {
           "Learn how to lower your cost to encode, store and deliver video with Theta's Video Infrastructure, in 5 steps with Onboarder.",
       },
       COMPONENTS: {
-        HERO: ThetaVideoHero,
-        LESSON_ONE: ThetaVideoLesson1,
-        LESSON_TWO: ThetaVideoLesson2,
+        HERO: ThetaHero,
+        LESSON_ONE: ThetaLesson1,
+        LESSON_TWO: ThetaLesson2,
+        LESSON_THREE: ThetaLesson3,
+      },
+    },
+    {
+      SLUG: "gnosis",
+      SEO: {
+        TITLE: "Onboarder - Explore Gnosis Chain, the community run chain",
+        DESCRIPTION:
+          "Learn about one of the first Ethereum sidechains and has stayed true to its values, Gnosis Chain, in 5 steps with Onboarder.",
+      },
+      COMPONENTS: {
+        HERO: GnosisHero,
+        LESSON_ONE: GnosisLesson1,
+        LESSON_TWO: GnosisLesson2,
+        LESSON_THREE: GnosisLesson3,
       },
     },
   ],

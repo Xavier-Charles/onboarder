@@ -21,7 +21,6 @@ function SwirlyDoodle({ className }) {
 }
 
 const Quests = () => {
- 
   return (
     <section
       id="hero"
@@ -73,10 +72,14 @@ const Quests = () => {
                 </div>
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <Link to={`/q/${quest.slug}`}>
-                  <span className="absolute inset-0"></span>
-                  {quest.title}
-                </Link>
+                {quest.commingSoon ? (
+                  <span>{quest.title} (soon)</span>
+                ) : (
+                  <Link to={`/q/${quest.slug}`}>
+                    <span className="absolute inset-0"></span>
+                    {quest.title}
+                  </Link>
+                )}
               </h3>
             </article>
           ))}
