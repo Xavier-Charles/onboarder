@@ -1,6 +1,6 @@
 import q5 from "../../../assets/img/questions/greenfield/q5.png";
 import q6 from "../../../assets/img/questions/gnosis/q6.png";
-import q7 from "../../../assets/img/questions/greenfield/q7.png";
+// import q7 from "../../../assets/img/questions/greenfield/q7.png";
 import q8 from "../../../assets/img/questions/gnosis/q8.png";
 
 export const lesson2Questions = [
@@ -57,9 +57,9 @@ export const lesson2Questions = [
               <li>Confirm the transaction. Once it the transaction is complete you'll have a brand new Safe!</li>
               </ol>
              `,
-    img: q7,
+    img: q5,
     question:
-      "Did you upload a video to the Theta Video API and get a playable link to add to your site?",
+      "Have you created a Safe Multisig Wallet? (You'll need it to answer the next question)",
     options: {
       1: { id: 1, value: "Yes I have!" },
       2: { id: 2, value: "No I haven't" },

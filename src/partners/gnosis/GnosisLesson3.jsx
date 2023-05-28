@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ReactHtmlParser from "react-html-parser";
 import Card from "../../components/lesson/Card";
-import { lesson3Questions } from "../../api/mockData/theta/lesson3Questions";
+import { lesson3Questions } from "../../api/mockData/gnosis/lesson3Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -176,7 +176,7 @@ const GnosisLesson3 = ({ onLessonComplete }) => {
         )}
       </AnimatePresence>
       {allCompleted && (
-        <LessonComplete onLessonComplete={onLessonComplete} lessonId={2} />
+        <LessonComplete onLessonComplete={onLessonComplete} lessonId={3} />
       )}
     </section>
   );

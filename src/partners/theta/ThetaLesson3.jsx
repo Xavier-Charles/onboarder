@@ -176,7 +176,7 @@ const ThetaLesson3 = ({ onLessonComplete }) => {
         )}
       </AnimatePresence>
       {allCompleted && (
-        <LessonComplete onLessonComplete={onLessonComplete} lessonId={2} />
+        <LessonComplete onLessonComplete={onLessonComplete} lessonId={3} />
       )}
     </section>
   );
