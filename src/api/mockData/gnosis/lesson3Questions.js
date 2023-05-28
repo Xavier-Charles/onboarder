@@ -14,7 +14,7 @@ export const lesson3Questions = [
     summary: `
               Chiado is a Gnosis testnet that was launched in October 2022. 
               Chiado's primary purpose is to be a long-lived testnet with tooling for developers
-              To add Chaido to your metamask
+              To add Chaido to your metamask, follow this guide:
               <li> Click <a class="text-jetbrown underline" target="_blank" href="https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params%5B0%5D%5BchainId%5D=0x27D8&params%5B0%5D%5BchainName%5D=Chiado&params%5B0%5D%5BrpcUrls%5D%5B0%5D=https://rpc.chiadochain.net&params%5B0%5D%5BnativeCurrency%5D%5Bname%5D=Chiado%20xDAI&params%5B0%5D%5BnativeCurrency%5D%5Bsymbol%5D=xDAI&params%5B0%5D%5BnativeCurrency%5D%5Bdecimals%5D=18&params%5B0%5D%5BblockExplorerUrls%5D%5B0%5D=https://blockscout.com/gnosis/chiado">Add Chaido testnet</a>.</li>
               <li>When MetaMask prompts a window, click <strong>Approve.</strong></li>
               <li>When MetaMask prompts another window, click <strong>Switch network.</strong></li>
@@ -105,8 +105,7 @@ export const lesson3Questions = [
               </ol>
              `,
     img: q12,
-    question:
-      "Paste the Address you copied in the text box below.",
+    question: "Paste the Address you copied in the text box below.",
     answer: true,
     type: "verify-storage-contract",
     hasInput: true,
