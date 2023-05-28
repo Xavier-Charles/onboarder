@@ -4,7 +4,12 @@ import {
   GreenFieldLesson2,
 } from "../partners/greenfield";
 
-import { ThetaHero, ThetaLesson1, ThetaLesson2 } from "../partners/theta";
+import {
+  ThetaHero,
+  ThetaLesson1,
+  ThetaLesson2,
+  ThetaLesson3,
+} from "../partners/theta";
 
 import {
   GnosisHero,
@@ -45,6 +50,7 @@ const CONFIG = {
         HERO: ThetaHero,
         LESSON_ONE: ThetaLesson1,
         LESSON_TWO: ThetaLesson2,
+        LESSON_THREE: ThetaLesson3,
       },
     },
     {
