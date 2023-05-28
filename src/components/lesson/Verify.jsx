@@ -33,11 +33,6 @@ const Verify = ({
   const verifyNetwork = async () => {
     connectWallet();
     const currentNetwork = await checkNetwork();
-    console.log(
-      "currentNetwork",
-      parseInt(currentNetwork),
-      selectedItem.answer
-    );
     if (parseInt(currentNetwork) === selectedItem.answer) {
       markAsCompleted();
     } else {
@@ -52,8 +47,6 @@ const Verify = ({
     connectWallet();
     // const currentNetwork = await checkNetwork();
     const balance = await checkBalance();
-
-    console.log("balance", parseInt(balance), selectedItem.answer);
 
     if (balance > selectedItem.answer) {
       markAsCompleted();
