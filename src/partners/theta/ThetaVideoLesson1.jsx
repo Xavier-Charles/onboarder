@@ -7,6 +7,7 @@ import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
 import LessonComplete from "../../components/lesson/LessonComplete";
+import ParticlesConfetti from "../../components/ConfettiParticles";
 
 const BlockQuoteSVG = ({ classes }) => (
   <svg
@@ -84,7 +85,11 @@ const ThetaVideoLesson1 = ({ onLessonComplete }) => {
               className="fixed inset-0 hidden bg-jetbrown bg-opacity-70 transition-opacity md:block"
               onClick={onCloseModal}
             />
-            <motion.div ref={containerRef} layoutId={`l1-${selectedId}`}>
+            <motion.div
+              className="relative"
+              ref={containerRef}
+              layoutId={`l1-${selectedId}`}
+            >
               <div className="flex w-full justify-center transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
                 <div className="relative flex flex-col w-full items-center overflow-hidden bg-slate rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
                   <motion.button
@@ -187,6 +192,7 @@ const ThetaVideoLesson1 = ({ onLessonComplete }) => {
                         )}
                       </section>
                     </div>
+                    <ParticlesConfetti cardProgress={cardProgress} />
                   </div>
                   <div className="mt-6 sm:mt-8">
                     <CardNav
