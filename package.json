@@ -25,6 +25,7 @@
     "react-html-parser": "2.0.2",
     "react-particles": "2.9.3",
     "react-router-dom": "6.11.1",
+    "tailwind-merge": "1.13.0",
     "tsparticles": "2.9.3"
   },
   "devDependencies": {
