@@ -20,7 +20,7 @@ export const lesson2Questions = [
       3: { id: 3, value: "Decentralized Sequencer" },
     },
     answer: 2,
-    classes: "lg:w-2/3",
+    classes: "lg:w-1/2",
   },
 
   {
@@ -47,7 +47,7 @@ export const lesson2Questions = [
       },
     },
     answer: 2,
-    classes: "lg:w-2/3",
+    classes: "lg:w-1/2",
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ export const lesson2Questions = [
   },
   {
     id: 8,
-    
+
     title: "Fraud Proofs with EVM-Native Verification",
     subtitle: "Minimizing Trust Assumptions in Optimistic Rollups",
     summary:
@@ -125,6 +125,6 @@ export const lesson2Questions = [
     },
     answer: 2,
 
-    classes: "lg:w-2/3",
+    classes: "lg:w-1/3",
   },
 ];

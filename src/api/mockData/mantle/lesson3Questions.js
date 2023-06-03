@@ -1,6 +1,6 @@
-import q9 from "../../../assets/img/questions/gnosis/q9.png";
-import q10 from "../../../assets/img/questions/gnosis/q10.png";
-import q11 from "../../../assets/img/questions/gnosis/q11.png";
+import q9 from "../../../assets/img/questions/mantle/q9.jpg";
+import q10 from "../../../assets/img/questions/mantle/q10.jpg";
+import q11 from "../../../assets/img/questions/mantle/q11.jpg";
 import q12 from "../../../assets/img/questions/gnosis/q12.png";
 import { linkGen, strongGen } from "../../../utils/textUtils";
 
@@ -15,7 +15,10 @@ export const lesson3Questions = [
               Mantle's Wadsley is a testnet that was launched in October 2022. 
               Mantle Wadsley's primary purpose is to be a long-lived testnet with tooling for developers
               To add Mantle Wadsley Testnet to your metamask, follow this guide:
-              <li> Click <a class="text-jetbrown underline" target="_blank" href="https://shanejonas.github.io/metamask-link/?method=wallet_addEthereumChain&params[0][chainId]=0x1389&params[0][chainName]=Mantle%20Wadsley&params[0][rpcUrls][0]=https://rpc.testnet.mantle.xyz&params[0][nativeCurrency][name]=$BIT&params[0][nativeCurrency][symbol]=$BIT&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://explorer.testnet.mantle.xyz">Add Mantle Wadsley testnet</a>.</li>
+              <li> Click ${linkGen(
+                "https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x1389&params[0][chainName]=Mantle%20Wadsley&params[0][rpcUrls][0]=https://rpc.testnet.mantle.xyz&params[0][nativeCurrency][name]=Bit&params[0][nativeCurrency][symbol]=Bit&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://explorer.testnet.mantle.xyz",
+                "Add Mantle Wadsley testnet"
+              )}.</li>
               <li>When MetaMask prompts a window, click <strong>Approve.</strong></li>
               <li>When MetaMask prompts another window, click <strong>Switch network.</strong></li>
               <li>After that come back here and verify.</li>
@@ -24,7 +27,7 @@ export const lesson3Questions = [
     img: q9,
     question:
       "Once you connect your wallet, we will check if you've switched to the correct network.",
-    answer: 10200,
+    answer: 5001,
     type: "verify-network",
     classes: "lg:w-1/3",
   },
@@ -33,20 +36,22 @@ export const lesson3Questions = [
     title: "Get test $Bit",
     subtitle:
       "Get testnet $Bit on the Mantle Wadsley network from the faucet to deploy your contract.",
-
     summary: `Mantle uses $BIT as its native token, they have a $BIT faucet on ETH Goerli.
               This faucet is an ERC-20 implementation of $BIT, with the addition of a faucet method that can mint tokens for the caller.
-              <br /> You'll need Roughly 0.00012 gETH to pay the gas fee for minting testnet $BIT. Get gEth at ${linkGen(
+              <br /><br /> You'll need Roughly 0.00012 gETH to pay the gas fee for minting testnet $BIT. Get gEth at ${linkGen(
                 "https://faucet.paradigm.xyz/",
                 "Paradigm faucet"
               )} or at ${linkGen(
       "https://goerlifaucet.com/",
       "Alchemy faucet"
     )}.
-              <br /> Then go to the ${linkGen(
+              <br /><br /> Go to the ${linkGen(
                 "https://faucet.testnet.mantle.xyz/",
                 "Mantle faucet"
-              )} to get $Bit.
+              )} to get $Bit. You'll need to authenticate with your twitter account, connect yout wallet, click the ${strongGen(
+      "Mint token"
+    )} button and approve the transaction.
+              <br /><br /> The $Bit you just minted won't show in your wallet right way. Go to the next step and we will show you how to add it to your wallet.
              `,
     img: q10,
     question:
@@ -66,23 +71,35 @@ export const lesson3Questions = [
                 <li>Go to the ${linkGen(
                   "https://bridge.testnet.mantle.xyz/",
                   "Mantle Bridge"
-                )} and select ${strongGen("Deposit $BIT from Goerli")}</li>
+                )} connect your wallet, select the amount of $Bit you want to deposit e.g 10, and click the ${strongGen(
+      "Allocate allowance before depositing assets"
+    )} Button. </li>
+                <li>Add your custom spending cap on metamask. It should be higher than the amount of $Bit you want to transfer e.g 11, and click the ${strongGen(
+                  "Next"
+                )} & ${strongGen("Approve")} buttons.</li>
+                <li>Click the ${strongGen(
+                  "Deposit Tokens to L2"
+                )} and ${strongGen(
+      "Confirm"
+    )} button. It should take about 10 mins to reflect in your wallet</li>
                 <li>Add the Goerli testnet $BIT contract address to your wallet ${linkGen(
                   "https://shanejonas.github.io/metamask-link/deep?method=wallet_watchAsset&params[type]=ERC20&params[options][address]=0x5a94dc6cc85fda49d8e9a8b85dde8629025c42be&params[options][symbol]=$Bit&params[options][decimals]=18&params[options][image]=https://i.imgur.com/VqFhr8m.png",
                   "with this link"
-                )}</li>
-                <li>Click the ${strongGen("Add token")} button</li>
+                )}.</li>
+                <li>Click the ${strongGen("Add token")} and ${strongGen(
+      "Add token"
+    )} button</li>
                 <li>You can use this same bridge to withdraw $BIT token from Mantle to ETH Goerli</li>
-                <li>After that come back here and verify.</li>
+                <li>Switch back to the Wadsley Testnet then come back here and verify.</li>
               </ol>
              `,
-    img: q10,
+    img: q11,
     question:
       "Once you connect your wallet, we will check if you've have $Bit.",
     answer: 0.0001,
     type: "verify-ERC20-balance",
     address: "0x5a94dc6cc85fda49d8e9a8b85dde8629025c42be",
-    classes: "lg:w-1/2",
+    classes: "lg:w-1/3",
   },
   {
     id: 12,
@@ -117,7 +134,7 @@ export const lesson3Questions = [
       1: { id: 1, value: "Yes I have!" },
     },
     answer: 1,
-    classes: "lg:w-1/3",
+    classes: "lg:w-1/2",
   },
 
   {
@@ -142,6 +159,6 @@ export const lesson3Questions = [
     answer: true,
     type: "verify-storage-contract",
     hasInput: true,
-    classes: "lg:w-full",
+    classes: "lg:w-1/2",
   },
 ];

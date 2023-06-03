@@ -12,7 +12,7 @@ export const lesson1Questions = [
     summary:
       "Mantle is a technology stack for scaling Ethereum, striving for EVM compatibility. Mantle offers an efficient, low-fee environment for developers to deploy smart contracts and users to experiment with web3 apps.",
     img: q1,
-    question: "What is the primary goal of Mantle?",
+    question: "What is the primary objective of Mantle?",
     options: {
       1: { id: 1, value: "Scaling Bitcoin" },
       2: { id: 2, value: "Scaling Ethereum" },
@@ -23,7 +23,7 @@ export const lesson1Questions = [
   },
   {
     id: 2,
-    title: "Mantle vs Ethereum",
+    title: "Mantle on Ethereum",
     subtitle:
       "Exploring the key differences between Mantle and Ethereum, and the advantages Mantle has",
     summary:
