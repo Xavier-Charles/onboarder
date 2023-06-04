@@ -18,6 +18,13 @@ import {
   GnosisLesson3,
 } from "../partners/gnosis";
 
+import {
+  MantleHero,
+  MantleLesson1,
+  MantleLesson2,
+  MantleLesson3,
+} from "../partners/mantle";
+
 const CONFIG = {
   SEO: {
     TITLE: "Onboarder - Seamlessly Onboard to Web3 Products and Protocols",
@@ -65,6 +72,21 @@ const CONFIG = {
         LESSON_ONE: GnosisLesson1,
         LESSON_TWO: GnosisLesson2,
         LESSON_THREE: GnosisLesson3,
+      },
+    },
+    {
+      SLUG: "mantle",
+      SEO: {
+        TITLE:
+          "Onboarder - Explore Mantle Network, an Ethereum rollup with exceptional UX",
+        DESCRIPTION:
+          "Learn about one of the first Ethereum sidechains and has stayed true to its values, Mantle Chain, in 5 steps with Onboarder.",
+      },
+      COMPONENTS: {
+        HERO: MantleHero,
+        LESSON_ONE: MantleLesson1,
+        LESSON_TWO: MantleLesson2,
+        LESSON_THREE: MantleLesson3,
       },
     },
   ],

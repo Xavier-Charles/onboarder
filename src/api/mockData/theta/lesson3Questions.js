@@ -59,7 +59,7 @@ export const lesson3Questions = [
               <ol class="list-decimal pl-5">
                 <li>Visit <a class="text-jetbrown underline" target="_blank" href="https://explorer.thetatoken.org/">explorer.thetatoken.org</a>.</li>
                 <li>For network select <strong>Theta Testnet (TFuel)</strong></li>
-                <li>Coby and paste you metamask wallet address in the address input</li>
+                <li>Copy and paste you metamask wallet address in the address input</li>
                 <li>Verify and click the <strong>Request Theta TFuel</strong> button</li>
                 <li>After some time the TFuel will you reflect in your wallet.</li>
                 <li>After that come back here and verify.</li>

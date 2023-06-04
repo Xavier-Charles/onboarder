@@ -1,12 +1,17 @@
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 import CompletedCheckBox from "./CompletedCheckBox";
+
+// TODO Replace clsx with twMerge
 
 const Card = ({ item, setSelectedId, isCompleted, layoutId, type, lesson }) => {
   return (
     <motion.div
       layoutId={layoutId}
-      className={clsx("p-4 pb-5 w-full lg:w-1/3 cursor-pointer", item.classes)}
+      className={twMerge(
+        "p-4 pb-5 w-full lg:w-1/3 cursor-pointer",
+        item.classes
+      )}
       onClick={() => {
         setSelectedId(item.id);
       }}

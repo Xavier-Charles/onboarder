@@ -4,6 +4,7 @@ import axelar from "../../assets/img/projects/axelar.jpg";
 import theta from "../../assets/img/projects/theta.jpg";
 import gnosis from "../../assets/img/projects/gnosis.jpg";
 import azuro from "../../assets/img/projects/azuro.jpg";
+import mantle from "../../assets/img/projects/mantle.jpg";
 
 export const questsList = [
   {
@@ -35,6 +36,16 @@ export const questsList = [
     img: gnosis,
     imgPos: "object-center",
     colors: ["#3e6957"],
+  },
+  {
+    id: 7,
+    slug: "mantle",
+    title: "Mantle Network",
+    start: "2023-06-28T09:30:00",
+    end: "2023-08-01T11:59:00",
+    img: mantle,
+    imgPos: "object-center",
+    colors: ["#223d3b"],
   },
   {
     id: 2,
