@@ -1,130 +1,99 @@
 import q5 from "../../../assets/img/questions/greenfield/q5.png";
-import q6 from "../../../assets/img/questions/gnosis/q6.png";
-// import q7 from "../../../assets/img/questions/greenfield/q7.png";
-import q8 from "../../../assets/img/questions/gnosis/q8.png";
+import q6 from "../../../assets/img/questions/flow/q6.jpg";
+import q7 from "../../../assets/img/questions/flow/q7.jpg";
+import { linkGen } from "../../../utils/textUtils";
 
 export const lesson2Questions = [
   {
     id: 5,
-    title: "Mantle's Improvements over L2 Solutions",
+    title: "Wallets on Flow",
     subtitle:
-      "Enhancements in data availability, trust minimization, and block production",
-    summary:
-      "Mantle introduces several improvements compared to traditional Layer 2 solutions. It offers modular data availability through EigenLayer, enabling increased transaction throughput without compromising security. Mantle uses Multi-Party Computation (MPC) and Threshold Signature Scheme (TSS) technology to minimize trust risks in L2 execution results. Additionally, Mantle aims to decentralize its Sequencer, reducing the potential for single points of failure or censorship.",
+      "An overview of crypto wallets for the Flow blockchain, including popular choices.",
+    summary: `Flow also has crypto wallets which can be used to connect to NFT projects and applications built on Flow. The two most widely used and integrated wallets across Flow applications and products are Blocto and Dapper, however, Ledger, Finoa and Kraken are also providers.
+       <br/> <br/> ${linkGen(
+         "https://blocto.io/",
+         "Blocto"
+       )} is a cross-chain wallet with a user-friendly interface, enabling users to connect to various Flow ecosystem applications and store tokens from multiple chains. On the other hand, ${linkGen(
+      "https://www.meetdapper.com/",
+      "Dapper"
+    )} is a user-friendly wallet built by the Dapper team, integrated with a limited number of Flow Blockchain applications like NBA Top Shot, Genies, and others.`,
     img: q5,
     question:
-      "What technology does Mantle use to minimize trust risks in L2 execution results?",
+      "Which wallet allows storing tokens from multiple chains including Flow, Ethereum, and Binance Smart Chain?",
     options: {
-      1: { id: 1, value: "Modular Data Availability" },
-      2: { id: 2, value: "Multi-Party Computation (MPC)" },
-      3: { id: 3, value: "Decentralized Sequencer" },
+      1: { id: 1, value: "Dapper wallet" },
+      2: { id: 2, value: "Blocto wallet" },
+      3: { id: 3, value: "Metamask wallet" },
     },
     answer: 2,
     classes: "lg:w-1/2",
   },
-
   {
     id: 6,
-    title: "Solving Data Availability with Mantle",
-    subtitle: "Using EigenLayer's Data Availability Solution",
+    title: "Exploring Cadence",
+    subtitle: "An innovative smart contract programming language",
     summary:
-      "Mantle is exploring EigenLayer's Data Availability solution, EigenDA, to ensure block data completeness and correctness on the Mantle execution layer. The solution allows nodes to provide data availability services to the Mantle network and participate in Mantle's economic model via $BIT staking. EigenDA employs a unicast channel for data exchange between network participants and maintains an erasure rate to ensure block data can be reconstructed.",
-    img: q6,
-    question:
-      "What is Mantle exploring to ensure data availability on their execution layer?",
+      "Cadence is a smart contract programming language designed for the Flow Blockchain. Its unique features include a strong static type system, resource-oriented programming, built-in pre-conditions and post-conditions for functions and transactions, and the use of capability-based security.",
+    img: q5,
+    question: "What is Cadence in the context of the Flow blockchain?",
     options: {
-      1: {
-        id: 1,
-        value: "Building their own data availability solution from scratch",
-      },
-      2: {
-        id: 2,
-        value: "Using EigenLayer's Data Availability solution, EigenDA",
-      },
-      3: {
-        id: 3,
-        value: "Relying on Ethereum's trust network for data availability",
-      },
+      1: { id: 1, value: "A blockchain explorer" },
+      2: { id: 2, value: "A smart contract programming language" },
+      3: { id: 3, value: "A type of cryptocurrency" },
     },
     answer: 2,
-    classes: "lg:w-1/2",
+    classes: "lg:w-1/3",
   },
   {
     id: 7,
-    title: "Decentralized Sequencer for Mantle",
-    subtitle: "Introducing Next-Generation Trustlessness",
+    title: "Understanding Accounts, Transactions, and Domains in Flow",
+    subtitle:
+      "Getting to grips with accounts, transactions, and the role of domains in the file system.",
     summary:
-      "Mantle is addressing concerns regarding the security and operational risks of relying on a single Sequencer in Optimistic Rollups by introducing a decentralized Sequencer. This will allow anyone to join a permissionless set of Layer 2 block producers, bringing more liveness and resilience to Mantle. Nodes that act as Sequencers will receive $BIT rewards and benefit from any MEV available through block production.",
-    img: q8,
+      "Let's get familiar with accounts and transactions. Accounts store all state and interfaces for state interaction. An account has two main areas: the contract area, where smart contracts and interfaces reside, and the file system, housing objects and their access capabilities. Objects are stored in a domain (storage, private, or public) and linked via a path. Paths consist of a domain and an identifier. For instance, in a storage domain, all objects (like structs, tokens, or NFTs) are saved, accessible only by the account owner. The private domain functions like a private API, allowing only the owner and authorised accounts to call certain functions. Meanwhile, the public domain is an account's public API where the owner can link capabilities accessible by anyone on the network. Code execution happens within transactions, submitted by external users to interact with the persistent state, including direct modification of account storage.",
+    img: q6,
     question:
-      "What is Mantle's solution to the concerns of relying on a single Sequencer in Optimistic Rollups?",
+      "What is the purpose of the 'public' domain in an account's file system?",
     options: {
-      1: { id: 1, value: "Creating a single point of failure in the system" },
+      1: {
+        id: 1,
+        value:
+          "It's where all objects such as structs and resource objects are stored.",
+      },
       2: {
         id: 2,
         value:
-          "Decentralizing the Sequencer and allowing anyone to join a permissionless set of L2 block producers",
+          "It's an account's public API where the owner can link capabilities that anyone else in the network can access.",
       },
       3: {
         id: 3,
-        value: "Eliminating the need for Sequencers in Optimistic Rollups",
+        value:
+          "It's a private API that only the owner and the accounts with access can use.",
       },
     },
     answer: 2,
-
     classes: "lg:w-1/3",
   },
   {
     id: 8,
-
-    title: "Fraud Proofs with EVM-Native Verification",
-    subtitle: "Minimizing Trust Assumptions in Optimistic Rollups",
-    summary:
-      "Mantle's fraud proofs use EVM-level instructions to minimize trust assumptions and guarantee that fraud proofs are derived directly from a compliant EVM client. This allows for all Ethereum clients to interact with a common proof system permissionlessly.",
-    img: q8,
-    question: "What is the main benefit of Mantle's fraud proof system?",
+    title: "Introduction to the Playground",
+    subtitle:
+      "Understanding the web editor and functionality in smart contract deployment",
+    summary: `The ${linkGen(
+      "https://play.onflow.org/",
+      "Flow Playground"
+    )} is a web editor for contract development using cadence. editor interface features a list of accounts on the left. Clicking on an account displays its associated contract in the main editor window. On the right, there's a 'deploy' button that deploys the open contract to the selected account. Below, the console area shows logs or errors from deployments, transactions, or scripts. After deploying a contract, the console confirms the success and the associated account now shows the contract name. Although the playground allows only one contract per account, multiple contracts can be stored in the same account during development.`,
+    img: q7,
+    question: "What happens when you click the 'Deploy' button?",
     options: {
-      1: {
-        id: 1,
-        value: "Reducing the need for fraud proofs in Optimistic Rollups",
-      },
+      1: { id: 1, value: "It deletes the current contract." },
       2: {
         id: 2,
-        value:
-          "Minimizing trust assumptions and guaranteeing fraud proofs are derived directly from a compliant EVM client",
+        value: "It deploys the visible contract to the selected account.",
       },
-      3: {
-        id: 3,
-        value: "Using a MIPS or WASM virtual machine to execute fraud proofs",
-      },
+      3: { id: 3, value: "It creates a new contract." },
     },
     answer: 2,
-    classes: "lg:w-1/3",
-  },
-  {
-    id: 9,
-    title: "Transaction Lifecycle on Mantle",
-    subtitle: "From Initiation to Storage",
-    summary:
-      "Transactions on Mantle are initiated by wallet users, dApps, or scripts and are processed by a Sequencer node. The transaction triggers a state verification process to ensure it is valid and paid the necessary fees. Pending blocks are combined to form batches that are verified by Multi-Party Computation nodes before being transmitted to Ethereum for storage.",
-    img: q8,
-    question:
-      "What is the purpose of Multi-Party Computation nodes in the transaction lifecycle on Mantle?",
-    options: {
-      1: { id: 1, value: "To process transactions and update the local state" },
-      2: {
-        id: 2,
-        value:
-          "To verify the correctness of block data submitted by the Sequencer before it is transmitted to Ethereum",
-      },
-      3: {
-        id: 3,
-        value:
-          "To sync block data and make it accessible for other users and dApps",
-      },
-    },
-    answer: 2,
-
     classes: "lg:w-1/3",
   },
 ];
