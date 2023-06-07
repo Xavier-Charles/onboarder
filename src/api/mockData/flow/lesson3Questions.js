@@ -7,158 +7,122 @@ import { linkGen, strongGen } from "../../../utils/textUtils";
 export const lesson3Questions = [
   {
     id: 9,
-    title: "Add Mantle Wadsley Testnet Network to metamask",
+    title: "Hello World Smart Contract",
     subtitle:
-      "Add Mantle Wadsley Testnet Network to your MetaMask to interact deploy a contract",
-
+      "A step-by-step guide to writing, understanding, and deploying a basic 'Hello World' smart contract",
     summary: `
-              Mantle's Wadsley is a testnet that was launched in October 2022. 
-              Mantle Wadsley's primary purpose is to be a long-lived testnet with tooling for developers
-              To add Mantle Wadsley Testnet to your metamask, follow this guide:
-              <li> Click ${linkGen(
-                "https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x1389&params[0][chainName]=Mantle%20Wadsley&params[0][rpcUrls][0]=https://rpc.testnet.mantle.xyz&params[0][nativeCurrency][name]=Bit&params[0][nativeCurrency][symbol]=Bit&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://explorer.testnet.mantle.xyz",
-                "Add Mantle Wadsley testnet"
-              )}.</li>
-              <li>When MetaMask prompts a window, click <strong>Approve.</strong></li>
-              <li>When MetaMask prompts another window, click <strong>Switch network.</strong></li>
-              <li>After that come back here and verify.</li>
-              </ol>
-             `,
+    Go to the ${linkGen(
+      "https://play.flow.com/",
+      "Cadence Playground"
+    )}, you'll find in ${strongGen(
+      "Contract 1"
+    )} a basic "Hello World" smart contract. Smart contracts can be deployed to accounts and can be interacted with using transactions or scripts.
+    <br /><br />
+    We begin by declaring a public contract named "Hello World" (the ${strongGen(
+      "pub"
+    )} keyword and be used interchangeably with ${strongGen(
+      "access(all)"
+    )}) be that anyone can import and access. This public field is a constant declared with the keyword "let", meaning its value can be set once and not changed later. Cadence, a strictly typed language, is used, enforcing consistency and preventing bugs.
+    <br /><br />
+    We then initialize our smart contract, setting the constant field's value to "Hello World", which can't be altered later. A getter method is created, returning the value of the greeting, which is a string.
+    <br /><br />
+    Finally, the smart contract is ready for deployment. Once deployed (by clicking the green ${strongGen(
+      "Deploy"
+    )} button), the contract is accessible to anyone on the blockchain. They can import the code and use the hello function to greet the world.
+    `,
     img: q9,
-    question:
-      "Once you connect your wallet, we will check if you've switched to the correct network.",
-    answer: 5001,
-    type: "verify-network",
-    classes: "lg:w-1/3",
+    question: "What is the primary purpose of types in the Cadence language?",
+    options: {
+      1: { id: 1, value: "To enhance developer experience" },
+      2: {
+        id: 2,
+        value:
+          "To prevent bugs and stop code from running due to incompatible types",
+      },
+      3: { id: 3, value: "To deploy the contract" },
+    },
+    answer: 2,
+    classes: "lg:w-1/2",
   },
   {
     id: 10,
-    title: "Get test $Bit",
+    title: "Introduction to Flow Transactions and Contracts",
     subtitle:
-      "Get testnet $Bit on the Mantle Wadsley network from the faucet to deploy your contract.",
-    summary: `Mantle uses $BIT as its native token, they have a $BIT faucet on ETH Goerli.
-              This faucet is an ERC-20 implementation of $BIT, with the addition of a faucet method that can mint tokens for the caller.
-              <br /><br /> You'll need Roughly 0.00012 gETH to pay the gas fee for minting testnet $BIT. Get gEth at ${linkGen(
-                "https://faucet.paradigm.xyz/",
-                "Paradigm faucet"
-              )} or at ${linkGen(
-      "https://goerlifaucet.com/",
-      "Alchemy faucet"
-    )}.
-              <br /><br /> Go to the ${linkGen(
-                "https://faucet.testnet.mantle.xyz/",
-                "Mantle faucet"
-              )} to get $Bit. You'll need to authenticate with your twitter account, connect yout wallet, click the ${strongGen(
-      "Mint token"
-    )} button and approve the transaction.
-              <br /><br /> The $Bit you just minted won't show in your wallet right way. Go to the next step and we will show you how to add it to your wallet.
-             `,
+      "A Comprehensive Look at How Transactions, Scripts, and Smart Contracts Operate in Flow",
+    summary: `Transactions and scripts are used to interact with flow contracts. Transactions can modify and read data from a contract, while scripts are used to read data without a fee.
+    <br /><br />
+    When an account authorizes a transaction, the code in that transaction has access to the authorizers' private storage.
+    Go to the transactions section on the side bar and open the Transaction file, and execute it, at the bottom right section the signer to be select account 1 then click the ${strongGen(
+      "send"
+    )} button.
+    <br /><br /> In the logs below you should see  ${strongGen(
+      '"Hello, World!"'
+    )}`,
     img: q10,
-    question:
-      "Once you connect your wallet, we will check if you've have $Bit.",
-    answer: 0.0001,
-    type: "verify-balance",
-    classes: "lg:w-1/3",
+    question: "Which one is used only to read data from flow?",
+    options: {
+      1: { id: 1, value: "Transaction" },
+      2: { id: 2, value: "Script" },
+      3: { id: 3, value: "Smart Contract" },
+    },
+    answer: 2,
+    classes: "lg:w-1/2",
   },
   {
     id: 11,
-    title: "Bridge $Bit to Mantle Wadsley",
-    subtitle:
-      "You've got $Bit on the Goerli, now bridge it to the Mantle Wadsley testnet.",
+    title: "Working with Resources",
+    subtitle: "Understanding and handling resources in a flow contract",
 
-    summary: `Now use the Mantle Testnet Bridge on Goerli to bridge your tokens by following the steps below:
-              <ol class="list-decimal pl-5">
-                <li>Go to the ${linkGen(
-                  "https://bridge.testnet.mantle.xyz/",
-                  "Mantle Bridge"
-                )} connect your wallet, select the amount of $Bit you want to deposit e.g 10, and click the ${strongGen(
-      "Allocate allowance before depositing assets"
-    )} Button. </li>
-                <li>Add your custom spending cap on metamask. It should be higher than the amount of $Bit you want to transfer e.g 11, and click the ${strongGen(
-                  "Next"
-                )} & ${strongGen("Approve")} buttons.</li>
-                <li>Click the ${strongGen(
-                  "Deposit Tokens to L2"
-                )} and ${strongGen(
-      "Confirm"
-    )} button. It should take about 10 mins to reflect in your wallet</li>
-                <li>Add the Goerli testnet $BIT contract address to your wallet ${linkGen(
-                  "https://shanejonas.github.io/metamask-link/deep?method=wallet_watchAsset&params[type]=ERC20&params[options][address]=0x5a94dc6cc85fda49d8e9a8b85dde8629025c42be&params[options][symbol]=$Bit&params[options][decimals]=18&params[options][image]=https://i.imgur.com/VqFhr8m.png",
-                  "with this link"
-                )}.</li>
-                <li>Click the ${strongGen("Add token")} and ${strongGen(
-      "Add token"
-    )} button</li>
-                <li>You can use this same bridge to withdraw $BIT token from Mantle to ETH Goerli</li>
-                <li>Switch back to the Wadsley Testnet then come back here and verify.</li>
-              </ol>
-             `,
+    summary: `Now go to the ${linkGen(
+      "https://play.flow.com/b70199ae-6488-4e58-ae58-9f4ffecbd66a",
+      "Cadence Playground"
+    )}, you'll find in ${strongGen(
+      "Contract 1"
+    )} a "Hello World" contract with a resource.
+    <br /><br />
+    In Cadence, resources are a composite type like a struct or a class, but with some special rules. Resources are useful when you want to model direct ownership.
+    <br /><br />
+    In the HelloWorld contract, we:
+    <ol class="list-decimal pl-5">
+    <li>Declare the resource HelloAsset with public scope pub</li>
+    <li>Declare the resource function hello() inside HelloAsset with public scope pub</li>
+    <li>Declare the contract function createHelloAsset() which creates a HelloAsset resource</li>
+    <li>The createHelloAsset() function uses the move operator (<-) to return the resource</li>
+    </ol>
+    `,
     img: q11,
     question:
-      "Once you connect your wallet, we will check if you've have $Bit.",
-    answer: 0.0001,
-    type: "verify-ERC20-balance",
-    address: "0x5a94dc6cc85fda49d8e9a8b85dde8629025c42be",
-    classes: "lg:w-1/3",
-  },
-  {
-    id: 12,
-    title: "Deploying your contract",
-    subtitle: "Deploy a contract on the gnosis chain using the Remix IDE",
-    summary: `
-              Remix is a web-based IDE for deploying smart contracts. To deploy a contract on Wadsley:
-              <ol class="list-decimal pl-5">
-                <li>Head over to ${linkGen(
-                  "https://remix-project.org/",
-                  "Remix IDE"
-                )}.</li>
-                <li>Click <strong>contracts</strong> folder and select ${strongGen(
-                  "Storage.sol"
-                )}. This is a simple contract that stores and retrieves a number. </li>
-                <li>Next, click the complile icon (as shown in the image) and then the button ${strongGen(
-                  "Compile 1_Storage.sol"
-                )}</li>
-                <li>Next click the deploy icon (as shown in the image)</li>
-                <li>In the options for Environment select ${strongGen(
-                  "InjectedProvider - Metamask"
-                )}</li>
-                <li>Ensure the address in the account option matches your address. Then click the ${strongGen(
-                  "Deploy"
-                )} button </li>
-                <li>Confirm the transaction in Metamask</li>
-              </ol>
-             `,
-    img: q11,
-    question: "Have you compiled and deployed your contract?",
+      "What happens if you try to load a resource from an account that doesn't have it?",
     options: {
-      1: { id: 1, value: "Yes I have!" },
+      1: { id: 1, value: "The transaction runs without errors" },
+      2: { id: 2, value: "An error occurs indicating nil value" },
+      3: { id: 3, value: "The resource gets created automatically" },
     },
-    answer: 1,
+    answer: 2,
     classes: "lg:w-1/2",
   },
-
   {
     id: 13,
-    title: "Verifying your contract",
+    title: "Hello Transaction",
     subtitle: "Let's verify your contract on the Mantle Wadsley Testnet.",
 
     summary: `
-              When you compile a Solidity smart contract, it generates an ABI and bytecode. If you deployed the ${strongGen(
-                "Storage.sol"
-              )} contract we have an ABI similar to yours. We are going to store and retrieve a number from your contract. Storing a number in your contract will cost you a small amount of $Bit. You would need to approve the transaction in Metamask.
-              To get your contract address:
-              <ol class="list-decimal pl-5">
-              <li>On the deploy section of Remix, go to ${strongGen(
-                "Deployed Contracts"
-              )}</li>
-              <li>Click the copy Icon to copy the address of your deployed contract then come back here to verify your contract</li>
-              </ol>
+             Now go to the transactions section of the playground. You'll find a transaction named ${strongGen(
+               "Create Hello"
+             )}. It is pretty well documented, so you can read through it to understand what it does.
+              <br /><br />
+              Select the signer and click the ${strongGen(
+                "Send"
+              )} button. You'll see the transaction being executed in the logs below.
              `,
     img: q12,
-    question: "Paste the Address you copied in the text box below.",
-    answer: true,
-    type: "verify-storage-contract",
-    hasInput: true,
+    question: "What message did you see when you excecuted the transaction?",
+    options: {
+      1: { id: 1, value: "Saved Hello Resource to account." },
+      2: { id: 2, value: "An error occurs indicating nil value" },
+      3: { id: 3, value: "Transaction Success" },
+    },
+    answer: 1,
     classes: "lg:w-1/2",
   },
 ];
