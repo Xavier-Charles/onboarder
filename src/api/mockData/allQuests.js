@@ -5,6 +5,7 @@ import theta from "../../assets/img/projects/theta.jpg";
 import gnosis from "../../assets/img/projects/gnosis.jpg";
 import azuro from "../../assets/img/projects/azuro.jpg";
 import mantle from "../../assets/img/projects/mantle.jpg";
+import spaceTime from "../../assets/img/projects/space-time.jpg";
 
 export const questsList = [
   {
@@ -46,6 +47,16 @@ export const questsList = [
     img: mantle,
     imgPos: "object-center",
     colors: ["#223d3b"],
+  },
+  {
+    id: 9,
+    slug: "space-time",
+    title: "Space Time",
+    start: "2023-06-28T09:30:00",
+    end: "2023-09-01T11:59:00",
+    img: spaceTime,
+    imgPos: "object-center",
+    colors: ["#8300c4"],
   },
   {
     id: 2,
