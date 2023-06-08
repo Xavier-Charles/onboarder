@@ -8,7 +8,7 @@ import useScrollToTop from "../hooks/useScrollToTop";
 import usePartner from "../hooks/usePartner";
 
 const Quest = () => {
-  const [lessonProgress, setLessonProgress] = useState(1);
+  const [lessonProgress, setLessonProgress] = useState(2);
   const PARTNER_CONFIG = usePartner();
   useScrollToTop();
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ReactHtmlParser from "react-html-parser";
 import Card from "../../components/lesson/Card";
-import { lesson2Questions } from "../../api/mockData/greenfield/lesson2Questions";
+import { lesson2Questions } from "../../api/mockData/spaceTime/lesson2Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -53,14 +53,14 @@ const SpaceTimeLesson2 = ({ onLessonComplete }) => {
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            Wallet Configuration
+            Dynamic NFTs with SxT
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
           {Object.values(lesson2Questions).map((item) => (
             <Card
               item={item}
-              lesson="WALLET CONFIGURATION"
+              lesson="DYNAMIC NFTS WITH SXT"
               key={item.id}
               setSelectedId={setSelectedId}
               layoutId={`l2-${item.id}`}
