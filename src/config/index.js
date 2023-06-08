@@ -25,6 +25,12 @@ import {
   MantleLesson3,
 } from "../partners/mantle";
 
+import {
+  SpaceTimeHero,
+  SpaceTimeLesson1,
+  SpaceTimeLesson2,
+} from "../partners/spaceTime";
+
 const CONFIG = {
   SEO: {
     TITLE: "Onboarder - Seamlessly Onboard to Web3 Products and Protocols",
@@ -87,6 +93,20 @@ const CONFIG = {
         LESSON_ONE: MantleLesson1,
         LESSON_TWO: MantleLesson2,
         LESSON_THREE: MantleLesson3,
+      },
+    },
+    {
+      SLUG: "space-time",
+      SEO: {
+        TITLE:
+          "Onboarder - Explore Space and Time, a decentralized data warehouse",
+        DESCRIPTION:
+          "Learn about one the first data warehouse that connects on-chain and off-chain data, Space and Time, in 5 steps with Onboarder.",
+      },
+      COMPONENTS: {
+        HERO: SpaceTimeHero,
+        LESSON_ONE: SpaceTimeLesson1,
+        LESSON_TWO: SpaceTimeLesson2,
       },
     },
   ],

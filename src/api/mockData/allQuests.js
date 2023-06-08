@@ -51,12 +51,12 @@ export const questsList = [
   {
     id: 9,
     slug: "space-time",
-    title: "Space Time",
+    title: "Space and Time",
     start: "2023-06-28T09:30:00",
     end: "2023-09-01T11:59:00",
     img: spaceTime,
     imgPos: "object-center",
-    colors: ["#8300c4"],
+    colors: ["#6a00ff"],
   },
   {
     id: 2,
