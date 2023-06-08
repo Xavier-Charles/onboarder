@@ -34,7 +34,7 @@ const SpaceTimeHero = ({ slug }) => {
                 Start Quest
               </motion.button>
               <a
-                href="https://greenfield.bnbchain.org/en"
+                href="https://www.spaceandtime.io/"
                 className="font-semibold leading-6 text-magwhite group relative w-[102px]"
               >
                 Learn more{" "}
