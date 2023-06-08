@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 import { AnimatePresence, motion } from "framer-motion";
 import Card from "../../components/lesson/Card";
-import { lesson1Questions } from "../../api/mockData/greenfield/lesson1Questions";
+import { lesson1Questions } from "../../api/mockData/spaceTime/lesson1Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
@@ -57,7 +57,7 @@ const SpaceTimeLesson1 = ({ onLessonComplete }) => {
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            BNB Greenfield - Intro
+            Space and Time - Intro
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">

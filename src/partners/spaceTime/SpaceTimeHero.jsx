@@ -7,7 +7,7 @@ const SpaceTimeHero = ({ slug }) => {
     <div className="bg-oxford min-h-screen">
       <div
         alt="backgound-image"
-        className="absolute inset-0 bg-[linear-gradient(315deg,#bc00cc,#510683,#0c0817, #0a0818)]"
+        className="absolute inset-0"
         style={{
           backgroundImage:
             "linear-gradient(315deg,#ad00bc 0%,#510683 30%,#42066b 50%,#0c0817 83%, #0a0818)",
