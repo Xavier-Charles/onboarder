@@ -6,6 +6,7 @@ import gnosis from "../../assets/img/projects/gnosis.jpg";
 import azuro from "../../assets/img/projects/azuro.jpg";
 import mantle from "../../assets/img/projects/mantle.jpg";
 import spaceTime from "../../assets/img/projects/space-time.jpg";
+import truflation from "../../assets/img/projects/truflation.jpeg";
 
 import flow from "../../assets/img/projects/flow.jpg";
 
@@ -69,6 +70,16 @@ export const questsList = [
     img: flow,
     imgPos: "object-center",
     colors: ["#00ee8a"],
+  },
+  {
+    id: 10,
+    slug: "truflation",
+    title: "Truflation",
+    start: "2023-06-18T09:30:00",
+    end: "2023-07-12T11:59:00",
+    img: truflation,
+    imgPos: "object-right",
+    colors: ["#2268c6"],
   },
   {
     id: 2,
