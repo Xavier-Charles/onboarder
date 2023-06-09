@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import spaceTime from "../../assets/img/quests/spaceTime.webp";
+import truflation from "../../assets/img/quests/truflation.svg";
 import { navigate } from "@reach/router";
 
 const SpaceTimeHero = ({ slug }) => {
@@ -10,7 +10,7 @@ const SpaceTimeHero = ({ slug }) => {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(315deg,#ad00bc 0%,#510683 30%,#42066b 50%,#0c0817 83%, #0a0818)",
+            "linear-gradient(102.38deg,#1a2b6b 12.59%,#0f59c7 48.05%,#5e76cf)",
         }}
       />
       <div className="relative isolate pt-14">
@@ -29,7 +29,7 @@ const SpaceTimeHero = ({ slug }) => {
                 onClick={() => navigate(`/q/${slug}/lessons`)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="rounded-md bg-[#510683]/80 px-5 py-3.5 font-semibold text-white shadow-sm hover:bg-[#510683] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
+                className="rounded-md bg-[#142254]/80 px-5 py-3.5 font-semibold text-white shadow-sm hover:bg-[#142254] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunglow"
               >
                 Start Quest
               </motion.button>
@@ -49,9 +49,9 @@ const SpaceTimeHero = ({ slug }) => {
           </div>
           <div className="mt-8 max-w-[280px] sm:max-w-md  lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <img
-              src={spaceTime}
+              src={truflation}
               alt=""
-              className="mt-10 aspect-[4/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+              className="mt-10 w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
             />
           </div>
         </div>
