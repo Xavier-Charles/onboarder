@@ -25,6 +25,13 @@ import {
   MantleLesson3,
 } from "../partners/mantle";
 
+import {
+  FlowHero,
+  FlowLesson1,
+  FlowLesson2,
+  FlowLesson3,
+} from "../partners/flow";
+
 const CONFIG = {
   SEO: {
     TITLE: "Onboarder - Seamlessly Onboard to Web3 Products and Protocols",
@@ -87,6 +94,21 @@ const CONFIG = {
         LESSON_ONE: MantleLesson1,
         LESSON_TWO: MantleLesson2,
         LESSON_THREE: MantleLesson3,
+      },
+    },
+    {
+      SLUG: "flow",
+      SEO: {
+        TITLE:
+          "Onboarder - Explore Flow Blockchain, a permissionless layer 1 blockchain,",
+        DESCRIPTION:
+          "Learn about a highly scalable permissionless blockchain designed for massive throughput, Flow, in 5 steps with Onboarder.",
+      },
+      COMPONENTS: {
+        HERO: FlowHero,
+        LESSON_ONE: FlowLesson1,
+        LESSON_TWO: FlowLesson2,
+        LESSON_THREE: FlowLesson3,
       },
     },
   ],
