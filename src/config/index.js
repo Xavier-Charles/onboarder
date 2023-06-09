@@ -26,11 +26,18 @@ import {
 } from "../partners/mantle";
 
 import {
+  SpaceTimeHero,
+  SpaceTimeLesson1,
+  SpaceTimeLesson2,
+} from "../partners/spaceTime";
+
+import {
   FlowHero,
   FlowLesson1,
   FlowLesson2,
   FlowLesson3,
 } from "../partners/flow";
+
 
 const CONFIG = {
   SEO: {
@@ -97,6 +104,20 @@ const CONFIG = {
       },
     },
     {
+      SLUG: "space-time",
+      SEO: {
+        TITLE:
+          "Onboarder - Explore Space and Time, a decentralized data warehouse",
+        DESCRIPTION:
+          "Learn about one the first data warehouse that connects on-chain and off-chain data, Space and Time, in 5 steps with Onboarder.",
+      },
+      COMPONENTS: {
+        HERO: SpaceTimeHero,
+        LESSON_ONE: SpaceTimeLesson1,
+        LESSON_TWO: SpaceTimeLesson2,
+      }
+    },
+     {
       SLUG: "flow",
       SEO: {
         TITLE:

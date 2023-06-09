@@ -69,7 +69,7 @@ export const lesson2Questions = [
       "Once you connect your wallet, we will check if you've switched to the correct network.",
     answer: 5600,
     type: "verify-network",
-    classes: "lg:w-4/2",
+    classes: "lg:w-4/12",
   },
   {
     id: 8,
