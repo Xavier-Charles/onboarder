@@ -1,7 +1,6 @@
 # Onboarder
 
-Learn and try out new web3 products, protocols and dApps in 10 minutes.
-
+Onboarder enables Web3 products to engage more developers. With weekly prizes and short, interactive, and fun tutorials and walk-throughs that showcase the power and possibilities of these products. Developers can quickly learn and apply different Web3 products to build killer dApps while standing a chance to get win cash prizes & cool NFTs.
 
 The Onboarder project is designed to reinvent the way we learn about web3 products, protocols, and decentralized applications (dApps) through interactive tutorials, engaging walk-throughs, and comprehensive introductions. Onboarder seeks to empower individuals, regardless of their technical background, to navigate the rapidly evolving web3 ecosystem with ease and confidence.
 
