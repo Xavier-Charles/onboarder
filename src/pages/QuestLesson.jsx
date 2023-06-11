@@ -6,6 +6,7 @@ import { scrollToElement } from "../utils/scrollTo";
 import { AnimatePresence, motion } from "framer-motion";
 import useScrollToTop from "../hooks/useScrollToTop";
 import usePartner from "../hooks/usePartner";
+import Javier from "../components/Javier";
 
 const Quest = () => {
   const [lessonProgress, setLessonProgress] = useState(1);
@@ -71,6 +72,7 @@ const Quest = () => {
         )}
       </AnimatePresence>
       <TransitionAnimation />
+      <Javier />
     </section>
   );
 };

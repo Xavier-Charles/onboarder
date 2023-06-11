@@ -11,7 +11,7 @@ export default {
         sunglow: "#ffc857", // rgb(255, 200, 87)
         jetbrown: "#323031", // rgb(50, 48, 49)
         oxford: "#14213d", // rgb(20, 33, 61)
-        slate: "#c8c8d4", // rgb(200, 200, 212) 
+        slate: "#c8c8d4", // rgb(200, 200, 212)
         magwhite: "#f9f5ff", // rgb(249, 245, 255)
         alice: "#F4FAFF", // rgb(244, 250, 255)
       },
@@ -20,5 +20,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
