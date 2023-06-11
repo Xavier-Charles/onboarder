@@ -60,7 +60,7 @@ const MantleLesson2 = ({ onLessonComplete }) => {
           {Object.values(lesson2Questions).map((item) => (
             <Card
               item={item}
-              lesson="SAFE WALLET"
+              lesson="THE MANTLE WAY"
               key={item.id}
               setSelectedId={setSelectedId}
               layoutId={`l2-${item.id}`}
