@@ -32,12 +32,17 @@ import {
 } from "../partners/spaceTime";
 
 import {
+  TruflationHero,
+  TruflationLesson1,
+  TruflationLesson2,
+} from "../partners/truflation";
+
+import {
   FlowHero,
   FlowLesson1,
   FlowLesson2,
   FlowLesson3,
 } from "../partners/flow";
-
 
 const CONFIG = {
   SEO: {
@@ -115,9 +120,9 @@ const CONFIG = {
         HERO: SpaceTimeHero,
         LESSON_ONE: SpaceTimeLesson1,
         LESSON_TWO: SpaceTimeLesson2,
-      }
+      },
     },
-     {
+    {
       SLUG: "flow",
       SEO: {
         TITLE:
@@ -130,6 +135,20 @@ const CONFIG = {
         LESSON_ONE: FlowLesson1,
         LESSON_TWO: FlowLesson2,
         LESSON_THREE: FlowLesson3,
+      },
+    },
+    {
+      SLUG: "truflation",
+      SEO: {
+        TITLE:
+          "Onboarder - Explore Truflation, an unbiased, real-market inflation and economic data aggregator",
+        DESCRIPTION:
+          "Learn about an unbiased, real-market inflation and economic data aggregator, Truflation, in 5 steps with Onboarder.",
+      },
+      COMPONENTS: {
+        HERO: TruflationHero,
+        LESSON_ONE: TruflationLesson1,
+        LESSON_TWO: TruflationLesson2,
       },
     },
   ],

@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import ReactHtmlParser from "react-html-parser";
+import { AnimatePresence, motion } from "framer-motion";
 import Card from "../../components/lesson/Card";
-import { lesson2Questions } from "../../api/mockData/mantle/lesson2Questions";
+import { lesson1Questions } from "../../api/mockData/truflation/lesson1Questions";
 import clsx from "clsx";
 import useClickOutside from "../../hooks/useClickOutside";
 import CardNav from "../../components/lesson/CardNav";
 import LessonComplete from "../../components/lesson/LessonComplete";
-import QandA from "../../components/lesson/QandA";
-import Verify from "../../components/lesson/Verify";
 import ParticlesConfetti from "../../components/ConfettiParticles";
 
 const BlockQuoteSVG = ({ classes }) => (
@@ -26,17 +24,17 @@ const BlockQuoteSVG = ({ classes }) => (
   </svg>
 );
 
-const MantleLesson2 = ({ onLessonComplete }) => {
+const SpaceTimeLesson1 = ({ onLessonComplete }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [cardProgress, setCardProgress] = useState(
-    lesson2Questions.map((item) => ({ id: item.id, completed: false }))
+    lesson1Questions.map((item) => ({ id: item.id, completed: false }))
   );
   const [showCardQA, setShowCardQA] = useState(false);
   const [selectedOptionId, setSelectedOptionId] = useState(null);
 
   const containerRef = useClickOutside(() => {});
 
-  const selectedItem = lesson2Questions.find((item) => item.id === selectedId);
+  const selectedItem = lesson1Questions.find((item) => item.id === selectedId);
 
   const onCloseModal = () => {
     setSelectedId(null);
@@ -44,27 +42,32 @@ const MantleLesson2 = ({ onLessonComplete }) => {
     setShowCardQA(false);
   };
 
-  const allCompleted = cardProgress.every((item) => item.completed);
+  const resetCardProgress = () => {
+    setCardProgress(
+      lesson1Questions.map((item) => ({ id: item.id, completed: false }))
+    );
+  };
+  const showAllCompleteModal =
+    cardProgress.every((item) => item.completed) && selectedId === null;
 
   return (
-    <section id="l2" className="text-gray-600 body-font">
+    <section id="l1" className="text-gray-600 body-font">
       <div className="container px-5 py-24 pt-32 mx-auto max-w-7xl">
         <figure className="relative isolate flex justify-center">
           <BlockQuoteSVG classes="rotate-[170deg] transform scale-x-[-1] scale-y-[1] -ml-[36%] mt-10" />
           <BlockQuoteSVG classes="ml-[26%] rotate-[160deg] -mt-11" />
           <h1 className="mt-2 text-center text-3xl font-sans font-semibold pb-10 tracking-tight text-magwhite sm:text-6xl">
-            The Mantle Way
+            Truflation - Intro
           </h1>
         </figure>
         <div className="flex flex-wrap justify-center">
-          {Object.values(lesson2Questions).map((item) => (
+          {Object.values(lesson1Questions).map((item) => (
             <Card
               item={item}
-              lesson="THE MANTLE WAY"
+              lesson="BASICS"
               key={item.id}
               setSelectedId={setSelectedId}
-              layoutId={`l2-${item.id}`}
-              type={item.type}
+              layoutId={`l1-${item.id}`}
               isCompleted={
                 cardProgress.find((pItem) => pItem.id === item.id)?.completed
               }
@@ -85,7 +88,7 @@ const MantleLesson2 = ({ onLessonComplete }) => {
             <motion.div
               className="relative"
               ref={containerRef}
-              layoutId={`l2-${selectedId}`}
+              layoutId={`l1-${selectedId}`}
             >
               <div className="flex w-full justify-center transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
                 <div className="relative flex flex-col w-full items-center overflow-hidden bg-slate rounded-xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
@@ -131,20 +134,53 @@ const MantleLesson2 = ({ onLessonComplete }) => {
                       >
                         {showCardQA ? (
                           <>
-                            {selectedItem.type?.includes("verify") ? (
-                              <Verify
-                                selectedItem={selectedItem}
-                                selectedOptionId={selectedOptionId}
-                                setSelectedOptionId={setSelectedOptionId}
-                                setCardProgress={setCardProgress}
-                              />
-                            ) : (
-                              <QandA
-                                selectedItem={selectedItem}
-                                selectedOptionId={selectedOptionId}
-                                setSelectedOptionId={setSelectedOptionId}
-                                setCardProgress={setCardProgress}
-                              />
+                            {Object.values(selectedItem.options).map(
+                              (option) => {
+                                const optionSelected =
+                                  selectedOptionId &&
+                                  selectedOptionId === option.id;
+                                const isCorrect =
+                                  selectedItem.answer === option.id;
+                                return (
+                                  <motion.button
+                                    key={option.id}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() => {
+                                      setSelectedOptionId(option.id);
+                                      if (isCorrect) {
+                                        setCardProgress((prev) => {
+                                          return prev.map((item) => {
+                                            if (item.id === selectedItem.id) {
+                                              return {
+                                                ...item,
+                                                completed: true,
+                                              };
+                                            }
+                                            return item;
+                                          });
+                                        });
+                                      }
+                                    }}
+                                    className={clsx(
+                                      "col-span-1 divide-y my-2 divide-gray-200 rounded-lg bg-magwhite shadow w-[90%]",
+                                      optionSelected &&
+                                        (isCorrect ? "bg-teal" : "bg-red-500")
+                                    )}
+                                  >
+                                    <div className="flex w-full items-center justify-between space-x-6 p-6">
+                                      <h3
+                                        className={clsx(
+                                          "truncate text-sm font-medium",
+                                          optionSelected && "text-magwhite"
+                                        )}
+                                      >
+                                        {option.value}
+                                      </h3>
+                                    </div>
+                                  </motion.button>
+                                );
+                              }
                             )}
                           </>
                         ) : (
@@ -175,11 +211,15 @@ const MantleLesson2 = ({ onLessonComplete }) => {
           </div>
         )}
       </AnimatePresence>
-      {allCompleted && (
-        <LessonComplete onLessonComplete={onLessonComplete} lessonId={2} />
+      {showAllCompleteModal && (
+        <LessonComplete
+          onLessonComplete={onLessonComplete}
+          resetCardProgress={resetCardProgress}
+          lessonId={1}
+        />
       )}
     </section>
   );
 };
 
-export default MantleLesson2;
+export default SpaceTimeLesson1;
