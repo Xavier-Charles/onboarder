@@ -60,7 +60,7 @@ const FlowLesson2 = ({ onLessonComplete }) => {
           {Object.values(lesson2Questions).map((item) => (
             <Card
               item={item}
-              lesson="SAFE WALLET"
+              lesson="WALLETS & EXPLORERS"
               key={item.id}
               setSelectedId={setSelectedId}
               layoutId={`l2-${item.id}`}

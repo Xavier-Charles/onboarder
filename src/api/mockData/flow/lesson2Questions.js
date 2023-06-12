@@ -26,7 +26,7 @@ export const lesson2Questions = [
       3: { id: 3, value: "Metamask wallet" },
     },
     answer: 2,
-    classes: "lg:w-1/2",
+    classes: "lg:w-2/3",
   },
   {
     id: 6,
@@ -94,6 +94,6 @@ export const lesson2Questions = [
       3: { id: 3, value: "It creates a new contract." },
     },
     answer: 2,
-    classes: "lg:w-1/3",
+    classes: "lg:w-2/3",
   },
 ];
