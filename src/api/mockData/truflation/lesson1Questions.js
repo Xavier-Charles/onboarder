@@ -14,15 +14,14 @@ export const lesson1Questions = [
     img: q1,
     question: "What is the primary mission of Truflation?",
     options: {
-      1: { id: "a", value: "To create inflation-proof DeFi products" },
+      1: { id: 1, value: "To create inflation-proof DeFi products" },
       2: {
-        id: "b",
+        id: 2,
         value: "To provide daily, unbiased, real-market economic data",
       },
-      3: { id: "c", value: "To launch its own cryptocurrency" },
+      3: { id: 3, value: "To launch its own cryptocurrency" },
     },
     answer: 2,
-
     classes: "lg:w-2/3",
   },
 
@@ -38,9 +37,9 @@ export const lesson1Questions = [
     question:
       "What is the primary advantage of the Truflation Index over the traditional CPI?",
     options: {
-      1: { id: "a", value: "It's updated annually" },
-      2: { id: "b", value: "It includes cryptocurrency inflation" },
-      3: { id: "c", value: "It provides automated and daily updates" },
+      1: { id: 1, value: "It's updated annually" },
+      2: { id: 2, value: "It includes cryptocurrency inflation" },
+      3: { id: 3, value: "It provides automated and daily updates" },
     },
     answer: 3,
     classes: "lg:w-1/3",
@@ -57,9 +56,9 @@ export const lesson1Questions = [
     question:
       "Which index does the Truflation Oracle use to provide daily updates?",
     options: {
-      1: { id: "a", value: "CPI Index" },
-      2: { id: "b", value: "US Truflation Index" },
-      3: { id: "c", value: "UK Truflation Index" },
+      1: { id: 1, value: "CPI Index" },
+      2: { id: 2, value: "US Truflation Index" },
+      3: { id: 3, value: "UK Truflation Index" },
     },
     answer: 2,
     classes: "lg:w-1/3",
@@ -76,12 +75,12 @@ export const lesson1Questions = [
     question:
       "What is the primary role of the TFI token in the Truflation ecosystem?",
     options: {
-      1: { id: "a", value: "To increase the value of Truflation" },
+      1: { id: 1, value: "To increase the value of Truflation" },
       2: {
-        id: "b",
+        id: 2,
         value: "To incentivize data providers and ensure decentralization",
       },
-      3: { id: "c", value: "To offer discounts on Truflation services" },
+      3: { id: 3, value: "To offer discounts on Truflation services" },
     },
     answer: 2,
     classes: "lg:w-2/3",
