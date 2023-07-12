@@ -8,4 +8,4 @@ Users will have to complete specific tasks that are verified real-time to ensure
 
 Quests (learning modules) focus on a particular topic and compose a series of tasks, Q and A’s, opinion polls and more. On completion of certain quests users get a very cool Limited Edition NFT on completion.
 
-Moving forward more mini-game exercises will be added to make the whole experience of learning new protocols more exciting and engaging.
+Moving forward more mini-game exercises will be added to make the whole experience of learning new protocols exciting and engaging.
